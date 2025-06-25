@@ -1,14 +1,14 @@
 .feedback-heading {
   color: #2563EB;
   font-weight: 700;
-  font-size: 60px;
+  font-size: 1.5em;
   font-family: var(--Bold);
 }
 
 .feedback-description {
     max-width: 80%;
     font-family: var(--SemiBold);
-    font-size: 25px;
+    font-size: 1em;
     color: #495057;
     text-align: left;
 }
@@ -36,17 +36,6 @@
     box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.075);
 }
 
-/* .feedback-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin: 0 auto; 
-    max-width: 900px;
-    width: 100%;
-} */
-
 
 .feedback-btn {
     font-family: var(--Regular);
@@ -67,7 +56,7 @@
 @media (max-width: 768px) {
     .feedback-box {
         width: 100%;
-        height: 250px;
+        height: 150px;
         font-size: 18px;
     }
 
@@ -77,11 +66,13 @@
     }
 
     .feedback-description {
-        font-size: 20px;
-        text-align: center;
+        font-size: 1em;
+        text-align: left;
+        width: 100%;
+        max-width: 100%;
     }
 
     .submit-btn {
-        text-align: center;
+        text-align: right;
     }
 }
