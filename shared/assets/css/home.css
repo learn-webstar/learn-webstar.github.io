@@ -167,12 +167,6 @@
         align-self: center;
     }
 
-    .progress-bar {
-        background-color: transparent;
-        height: 6px;
-        border-radius: 20px;
-    }
-
 
     #scrollable-order-list1 {
         max-height: 400px !important;
