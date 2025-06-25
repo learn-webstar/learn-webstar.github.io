@@ -4,18 +4,22 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Webstar | Explore</title>
+    <title>Webstar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="shared/assets/css/global-styles.css">
     <link rel="stylesheet" href="shared/assets/css/sidebar-and-container-styles.css">
-    <link rel="stylesheet" href="shared/assets/css/explore.css">
+    <link rel="stylesheet" href="shared/assets/css/faqs.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center p-0 p-md-3">
+    <div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center p-3">
         <div class="row w-100">
+
             <!-- Sidebar (only shows on mobile) -->
             <div class="offcanvas offcanvas-start d-md-none" tabindex="-1" id="sidebarOffcanvas"
                 aria-labelledby="sidebarOffcanvasLabel" style="background-color: #fff; width: 250px;">
@@ -31,24 +35,23 @@
 
                         <hr>
                         <ul class="nav nav-pills flex-column mb-auto">
-                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2 rounded-3" data-page="home">
-                                <img src="shared/assets/img/dashboard.png" style="width: 30px; height: 30px;">
-                                <a class="nav-link text-dark p-0" href="index.html">Home</a>
+                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2 rounded-3 selected-box">
+                                <img src="shared/assets/img/dashboard-w.png" style="width: 30px; height: 30px;">
+                                <a class="nav-link selected p-0" href="index.html">Home</a>
                             </li>
-                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2 rounded-3" data-page="course">
+                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2">
                                 <img src="shared/assets/img/courses.png" style="width: 30px; height: 30px;">
                                 <a class="nav-link text-dark p-0" href="course.html">Courses</a>
                             </li>
-                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2 rounded-3" data-page="explore">
+                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2">
                                 <img src="shared/assets/img/explore.png" style="width: 30px; height: 30px;">
                                 <a class="nav-link text-dark p-0" href="explore.html">Explore</a>
                             </li>
-                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2 rounded-3" data-page="shop">
+                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2">
                                 <img src="shared/assets/img/shop.png" style="width: 30px; height: 30px;">
                                 <a class="nav-link text-dark p-0" href="shop.html">Shop</a>
                             </li>
-                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2 rounded-3"
-                                data-page="minigames">
+                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2">
                                 <img src="shared/assets/img/games.png" style="width: 30px; height: 30px;">
                                 <a class="nav-link text-dark p-0" href="miniGames.html">Mini-games</a>
                             </li>
@@ -176,10 +179,10 @@
                 </div>
             </div>
 
-
             <!-- Main Container Column-->
             <div class="col main-container m-0 p-0 mx-0 mx-md-2 p-0 p-md-4 overflow-y-auto">
                 <div class="card border-0 px-3 pt-3 m-0 h-100 w-100 rounded-0 shadow-none">
+
                     <!-- Navbar for mobile -->
                     <nav class="navbar navbar-light px-3 d-md-none">
                         <div class="container-fluid position-relative">
@@ -199,128 +202,110 @@
                         </div>
                     </nav>
 
+                    <!-- PUT CONTENT HERE -->
+                    <div class="container-fluid overflow-y-auto" style="max-height: 100vh;">
+                        <div class="col">
+                            <!-- Main panel -->
+                            <div class="main px-4 py-5">
+                                <h1 class="faq-heading mb-3">Frequently Asked Questions</h1>
 
-                    <div class=" container p-3 searchbar-container">
-                        <div class="searchbar">
-                            <span class="searchbar-icon bg-white border-0" id="search">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="31" fill="currentColor"
-                                    class="bi bi-search" viewBox="0 0 16 16">
-                                    <path
-                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.442 1.398a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z" />
-                                </svg>
-                            </span>
-                            <input type="text" class="form-control border-0 explore-search-input" placeholder="Search">
-                        </div>
-                    </div>
-                    <div class="user-list">
-                        <div class="user-row">
-                            <div class="avatar rounded-circle bg-primary"></div>
-                            <div>
-                                <div class="fw-bold">John Doe</div>
-                                <div class="text-secondary">@johndoe</div>
+                                <details class="faq-item">
+                                    <summary><img src="shared/assets/img/dropdown.png" class="arrow-icon" alt="toggle">
+                                        What is WebStar?</summary>
+                                    <div class="faq-content">
+                                        WebStar is a web-based interactive learning platform designed to teach web
+                                        development using gamification techniques. It is specifically developed for
+                                        second- and third-year BSIT students of PUP-STC to enhance learning through
+                                        hands-on practice and engaging game-like features.
+                                    </div>
+                                </details>
+
+                                <details class="faq-item">
+                                    <summary><img src="shared/assets/img/dropdown.png" class="arrow-icon" alt="toggle">
+                                        Who
+                                        can use WebStar?</summary>
+                                    <div class="faq-content">
+                                        WebStar is primarily for PUP-STC BSIT students but open to anyone interested in
+                                        learning web development.
+                                    </div>
+                                </details>
+
+                                <details class="faq-item">
+                                    <summary><img src="shared/assets/img/dropdown.png" class="arrow-icon" alt="toggle">
+                                        What topics are covered in WebStar?</summary>
+                                    <div class="faq-content">
+                                        WebStar covers HTML, CSS, JavaScript, and responsive design along with
+                                        interactive activities.
+                                    </div>
+                                </details>
+
+                                <details class="faq-item">
+                                    <summary><img src="shared/assets/img/dropdown.png" class="arrow-icon" alt="toggle">
+                                        How
+                                        does gamification work in WebStar?</summary>
+                                    <div class="faq-content">
+                                        Learners earn points, badges, and rank up through coding challenges, quizzes,
+                                        and achievements.
+                                    </div>
+                                </details>
+
+                                <details class="faq-item">
+                                    <summary><img src="shared/assets/img/dropdown.png" class="arrow-icon" alt="toggle">
+                                        Do
+                                        I need prior experience in coding to use WebStar?</summary>
+                                    <div class="faq-content">
+                                        No. WebStar is beginner-friendly and provides step-by-step tutorials and hints
+                                        for each challenge.
+                                    </div>
+                                </details>
+
+                                <details class="faq-item">
+                                    <summary><img src="shared/assets/img/dropdown.png" class="arrow-icon" alt="toggle">
+                                        Is
+                                        WebStar accessible outside the campus?</summary>
+                                    <div class="faq-content">
+                                        Yes, WebStar is fully web-based and accessible from anywhere with an internet
+                                        connection.
+                                    </div>
+                                </details>
+
+                                <details class="faq-item">
+                                    <summary><img src="shared/assets/img/dropdown.png" class="arrow-icon" alt="toggle">
+                                        What should I do if I forget my password?</summary>
+                                    <div class="faq-content">
+                                        You can reset your password via the “Forgot Password” link on the login page and
+                                        follow the email instructions.
+                                    </div>
+                                </details>
                             </div>
                         </div>
-                        <hr>
-                        <div class="user-row">
-                            <div class="avatar rounded-circle bg-primary"></div>
-                            <div>
-                                <div class="fw-bold">Jane Smith</div>
-                                <div class="text-secondary">@janesmith</div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="user-row">
-                            <div class="avatar rounded-circle bg-primary"></div>
-                            <div>
-                                <div class="fw-bold">John Smith</div>
-                                <div class="text-secondary">@johnsmith</div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="user-row">
-                            <div class="avatar rounded-circle bg-primary"></div>
-                            <div>
-                                <div class="fw-bold">Jane Doe</div>
-                                <div class="text-secondary">@janedoe</div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="user-row">
-                            <div class="avatar rounded-circle bg-primary"></div>
-                            <div>
-                                <div class="fw-bold">Bill Gates</div>
-                                <div class="text-secondary">@billgates</div>
-                            </div>
-                        </div>
-                        <hr>
-                        <hr>
-                        <div class="user-row">
-                            <div class="avatar rounded-circle bg-primary"></div>
-                            <div>
-                                <div class="fw-bold">Bill Gates</div>
-                                <div class="text-secondary">@billgates</div>
-                            </div>
-                        </div>
-                        <hr>
-                        <hr>
-                        <div class="user-row">
-                            <div class="avatar rounded-circle bg-primary"></div>
-                            <div>
-                                <div class="fw-bold">Bill Gates</div>
-                                <div class="text-secondary">@billgates</div>
-                            </div>
-                        </div>
-                        <hr>
-                        <hr>
-                        <div class="user-row">
-                            <div class="avatar rounded-circle bg-primary"></div>
-                            <div>
-                                <div class="fw-bold">Bill Gates</div>
-                                <div class="text-secondary">@billgates</div>
-                            </div>
-                        </div>
-                        <hr>
                     </div>
                 </div>
+
             </div>
         </div>
-    </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const currentPath = window.location.pathname.split("/").pop(); 
-                const pageMap = {
-                    "index.html": "home",
-                    "course.html": "course",
-                    "explore.html": "explore",
-                    "shop.html": "shop",
-                    "miniGames.html": "minigames"
-                };
+        <script>
+            document.querySelectorAll('.faq-item').forEach(detail => {
+                const icon = detail.querySelector('.arrow-icon');
+                const closedSrc = "shared/assets/img/dropdown.png";
+                const openSrc = "shared/assets/img/updown.png";
 
-                const activePage = pageMap[currentPath];
-                const navItems = document.querySelectorAll('[data-page]');
+                // Add transition effect
+                icon.style.transition = "opacity 0.3s ease";
 
-                navItems.forEach(item => {
-                    const page = item.getAttribute('data-page');
-                    const link = item.querySelector('a');
-                    const img = item.querySelector('img');
-
-                    if (page === activePage) {
-                        item.classList.add("selected-box");
-                        link.classList.add("selected");
-                        const src = img.getAttribute("src").replace(".png", "-w.png");
-                        img.setAttribute("src", src);
-                    } else {
-                        item.classList.remove("selected-box");
-                        link.classList.remove("selected");
-                        const src = img.getAttribute("src").replace("-w.png", ".png");
-                        img.setAttribute("src", src);
-                    }
+                detail.addEventListener("toggle", () => {
+                    icon.style.opacity = "0"; // Fade out
+                    setTimeout(() => {
+                        icon.src = detail.open ? openSrc : closedSrc;
+                        icon.style.opacity = "1"; // Fade in
+                    }, 150); // Delay matches half the transition time
                 });
             });
+
         </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
