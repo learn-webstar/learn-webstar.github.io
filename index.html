@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="shared/assets/css/sidebar-and-container-styles.css">
     <link rel="stylesheet" href="shared/assets/css/home.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="shared/assets/img/webstar-icon.png">
+
 </head>
 
 <body>
@@ -33,23 +35,24 @@
 
                         <hr>
                         <ul class="nav nav-pills flex-column mb-auto">
-                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2 rounded-3 selected-box">
-                                <img src="shared/assets/img/dashboard-w.png" style="width: 30px; height: 30px;">
-                                <a class="nav-link selected p-0" href="index.html">Home</a>
+                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2 rounded-3" data-page="home">
+                                <img src="shared/assets/img/dashboard.png" style="width: 30px; height: 30px;">
+                                <a class="nav-link text-dark p-0" href="index.html">Home</a>
                             </li>
-                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2">
+                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2 rounded-3" data-page="course">
                                 <img src="shared/assets/img/courses.png" style="width: 30px; height: 30px;">
                                 <a class="nav-link text-dark p-0" href="course.html">Courses</a>
                             </li>
-                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2">
+                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2 rounded-3" data-page="explore">
                                 <img src="shared/assets/img/explore.png" style="width: 30px; height: 30px;">
                                 <a class="nav-link text-dark p-0" href="explore.html">Explore</a>
                             </li>
-                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2">
+                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2 rounded-3" data-page="shop">
                                 <img src="shared/assets/img/shop.png" style="width: 30px; height: 30px;">
                                 <a class="nav-link text-dark p-0" href="shop.html">Shop</a>
                             </li>
-                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2">
+                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2 rounded-3"
+                                data-page="minigames">
                                 <img src="shared/assets/img/games.png" style="width: 30px; height: 30px;">
                                 <a class="nav-link text-dark p-0" href="miniGames.html">Mini-games</a>
                             </li>
@@ -71,8 +74,8 @@
                                         Conditions</a></li>
                                 <li><a class="dropdown-item" style="font-family: var(--Regular);" href="#">Change
                                         Password</a></li>
-                                <li><a class="dropdown-item" style="font-family: var(--Regular);" href="#">FAQs</a></li>
-                                <li><a class="dropdown-item" style="font-family: var(--Regular);" href="#">Send
+                                <li><a class="dropdown-item" style="font-family: var(--Regular);" href="faqs.html">FAQs</a></li>
+                                <li><a class="dropdown-item" style="font-family: var(--Regular);" href="feedback.html">Send
                                         Feedback</a></li>
                                 <hr class="dropdown-divider">
                                 <li><a class="dropdown-item" style="font-family: var(--Bold);" href="profile.html"><i
@@ -157,9 +160,9 @@
                                             Conditions</a></li>
                                     <li><a class="dropdown-item" style="font-family: var(--Regular);" href="#">Change
                                             Password</a></li>
-                                    <li><a class="dropdown-item" style="font-family: var(--Regular);" href="#">FAQs</a>
+                                    <li><a class="dropdown-item" style="font-family: var(--Regular);" href="faqs.html">FAQs</a>
                                     </li>
-                                    <li><a class="dropdown-item" style="font-family: var(--Regular);" href="#">Send
+                                    <li><a class="dropdown-item" style="font-family: var(--Regular);" href="feedback.html">Send
                                             Feedback</a></li>
                                     <hr class="dropdown-divider">
                                     <li><a class="dropdown-item" style="font-family: var(--Bold);"
@@ -643,30 +646,33 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
-                const file = window.location.pathname.split("/").pop();
-                const pageName = file.replace(".html", "") || "index";
-
+                const currentPath = window.location.pathname.split("/").pop(); 
                 const pageMap = {
-                    "index": "home",
-                    "course": "course",
-                    "explore": "explore",
-                    "shop": "shop",
-                    "miniGames": "minigames"
+                    "index.html": "home",
+                    "course.html": "course",
+                    "explore.html": "explore",
+                    "shop.html": "shop",
+                    "miniGames.html": "minigames"
                 };
 
-                const activePage = pageMap[pageName] || "home";
+                const activePage = pageMap[currentPath];
+                const navItems = document.querySelectorAll('[data-page]');
 
-                document.querySelectorAll('.nav-item[data-page]').forEach(item => {
-                    if (item.dataset.page === activePage) {
+                navItems.forEach(item => {
+                    const page = item.getAttribute('data-page');
+                    const link = item.querySelector('a');
+                    const img = item.querySelector('img');
+
+                    if (page === activePage) {
                         item.classList.add("selected-box");
-
-                        const link = item.querySelector("a.nav-link");
-                        if (link) link.classList.add("selected");
-
-                        const img = item.querySelector("img");
-                        if (img && !img.src.includes("-w.png")) {
-                            img.src = img.src.replace(".png", "-w.png");
-                        }
+                        link.classList.add("selected");
+                        const src = img.getAttribute("src").replace(".png", "-w.png");
+                        img.setAttribute("src", src);
+                    } else {
+                        item.classList.remove("selected-box");
+                        link.classList.remove("selected");
+                        const src = img.getAttribute("src").replace("-w.png", ".png");
+                        img.setAttribute("src", src);
                     }
                 });
             });
