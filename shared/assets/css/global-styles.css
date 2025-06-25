@@ -36,9 +36,11 @@
 :root {
     /* Color Branding */
     --lightBlue: #D4E0F9;
-    --white: #ffffff;
     --blue: #2A63E2;
     --black: #2C2C2C;
+    --primaryColor: #FDDF94;
+    --highlight: #FF6B6B;
+    --white: #FFF9F0;
 
     /* Typography */
     --Black: 'DM Sans Black';
