@@ -1,6 +1,3 @@
-
-
-
 <!doctype html>
 <html lang="en">
 
@@ -34,25 +31,26 @@
 
                         <hr>
                         <ul class="nav nav-pills flex-column mb-auto">
-                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2 rounded-3 selected-box">
-                                <img src="shared/assets/img/dashboard-w.png" style="width: 30px; height: 30px;">
-                                <a class="nav-link selected p-0" href="index.php">Home</a>
+                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2 rounded-3" data-page="home">
+                                <img src="shared/assets/img/dashboard.png" style="width: 30px; height: 30px;">
+                                <a class="nav-link text-dark p-0" href="index.html">Home</a>
                             </li>
-                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2">
+                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2 rounded-3" data-page="course">
                                 <img src="shared/assets/img/courses.png" style="width: 30px; height: 30px;">
-                                <a class="nav-link text-dark p-0" href="course.php">Courses</a>
+                                <a class="nav-link text-dark p-0" href="course.html">Courses</a>
                             </li>
-                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2">
+                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2 rounded-3" data-page="explore">
                                 <img src="shared/assets/img/explore.png" style="width: 30px; height: 30px;">
-                                <a class="nav-link text-dark p-0" href="explore.php">Explore</a>
+                                <a class="nav-link text-dark p-0" href="explore.html">Explore</a>
                             </li>
-                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2">
+                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2 rounded-3" data-page="shop">
                                 <img src="shared/assets/img/shop.png" style="width: 30px; height: 30px;">
-                                <a class="nav-link text-dark p-0" href="shop.php">Shop</a>
+                                <a class="nav-link text-dark p-0" href="shop.html">Shop</a>
                             </li>
-                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2">
+                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2 rounded-3"
+                                data-page="minigames">
                                 <img src="shared/assets/img/games.png" style="width: 30px; height: 30px;">
-                                <a class="nav-link text-dark p-0" href="miniGames.php">Mini-games</a>
+                                <a class="nav-link text-dark p-0" href="miniGames.html">Mini-games</a>
                             </li>
                         </ul>
 
@@ -76,12 +74,12 @@
                                 <li><a class="dropdown-item" style="font-family: var(--Regular);" href="#">Send
                                         Feedback</a></li>
                                 <hr class="dropdown-divider">
-                                <li><a class="dropdown-item" style="font-family: var(--Bold);" href="profile.php"><i
+                                <li><a class="dropdown-item" style="font-family: var(--Bold);" href="profile.html"><i
                                             class="fa-solid fa-user me-2"></i>My Profile</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" style="font-family: var(--Bold);" href="login.php"><i
+                                <li><a class="dropdown-item" style="font-family: var(--Bold);" href="login.html"><i
                                             class="fa-solid fa-right-from-bracket me-2"></i>Sign out</a></li>
                             </ul>
                         </div>
@@ -180,8 +178,8 @@
 
 
             <!-- Main Container Column-->
-            <div class="col main-container m-0 p-0 mx-2 p-4">
-                <div class="card border-0 p-3 h-100 w-100 rounded-0 shadow-none">
+            <div class="col main-container m-0 p-0 mx-0 mx-md-2 p-0 p-md-4 overflow-y-auto">
+                <div class="card border-0 px-3 pt-3 m-0 h-100 w-100 rounded-0 shadow-none">
                     <!-- Navbar for mobile -->
                     <nav class="navbar navbar-light px-3 d-md-none">
                         <div class="container-fluid position-relative">
@@ -201,7 +199,8 @@
                         </div>
                     </nav>
 
-                    <div class="container p-3" <div class="searchbar-container">
+
+                    <div class=" container p-3 searchbar-container">
                         <div class="searchbar">
                             <span class="searchbar-icon bg-white border-0" id="search">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="31" fill="currentColor"
@@ -290,35 +289,38 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const file = window.location.pathname.split("/").pop();
-            const pageName = file.replace(".html", "") || "index";
+            document.addEventListener("DOMContentLoaded", function () {
+                const currentPath = window.location.pathname.split("/").pop(); 
+                const pageMap = {
+                    "index.html": "home",
+                    "course.html": "course",
+                    "explore.html": "explore",
+                    "shop.html": "shop",
+                    "miniGames.html": "minigames"
+                };
 
-            const pageMap = {
-                "index": "home",
-                "course": "course",
-                "explore": "explore",
-                "shop": "shop",
-                "miniGames": "minigames"
-            };
+                const activePage = pageMap[currentPath];
+                const navItems = document.querySelectorAll('[data-page]');
 
-            const activePage = pageMap[pageName] || "explore";
+                navItems.forEach(item => {
+                    const page = item.getAttribute('data-page');
+                    const link = item.querySelector('a');
+                    const img = item.querySelector('img');
 
-            document.querySelectorAll('.nav-item[data-page]').forEach(item => {
-                if (item.dataset.page === activePage) {
-                    item.classList.add("selected-box");
-
-                    const link = item.querySelector("a.nav-link");
-                    if (link) link.classList.add("selected");
-
-                    const img = item.querySelector("img");
-                    if (img && !img.src.includes("-w.png")) {
-                        img.src = img.src.replace(".png", "-w.png");
+                    if (page === activePage) {
+                        item.classList.add("selected-box");
+                        link.classList.add("selected");
+                        const src = img.getAttribute("src").replace(".png", "-w.png");
+                        img.setAttribute("src", src);
+                    } else {
+                        item.classList.remove("selected-box");
+                        link.classList.remove("selected");
+                        const src = img.getAttribute("src").replace("-w.png", ".png");
+                        img.setAttribute("src", src);
                     }
-                }
+                });
             });
-        });
-    </script>
+        </script>
 </body>
 
 </html>
