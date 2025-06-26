@@ -26,7 +26,7 @@ html, body {
 
 @media (min-width: 768px) {
   body {
-    background-color: var(--lightBlue); 
+    background-color: var(--black); 
   }
 
   .main-container{
@@ -36,7 +36,7 @@ html, body {
 }
 
 .nav-item {
-    font-family: var(--Bold);
+    font-family: var(--SemiBold);
     text-decoration: none;
     letter-spacing: -1px;
     font-size: 17px;
@@ -47,15 +47,16 @@ html, body {
 }
 
 .selected {
-    color: var(--white) !important;
+    color: var(--black) !important;
     opacity: 100% !important;
+
 }
 
 .selected-box {
-    background-color: var(--blue) !important;
+    background-color: var(--primaryColor) !important;
 }
 
 .selected-box-course {
-    background-color: var(--blue) !important;
+    background-color: var(--primaryColor) !important;
 }
 

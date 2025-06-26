@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html lang="en">
 
@@ -20,10 +18,15 @@
         }
 
         .profile {
-            background-color: var(--blue);
+            background-color: var(--primaryColor);
         }
 
         .logo-badge {
+            background-color: var(--white1);
+            border: 1px solid var(--black) !important;
+        }
+
+        .progress {
             background-color: var(--black);
         }
 
@@ -35,6 +38,27 @@
             display: none;
         }
 
+        .text-white {
+            color: var(--black) !important;
+        }
+
+        .btn-primary {
+            background-color: var(--primaryColor);
+            color: var(--black);
+            border: 1px solid var(--black);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primaryColor);
+            color: var(--black);
+            border: 1px solid var(--black);
+        }
+
+        .btn-secondary {
+            background-color: var(--black);
+            color: var(--white1);
+            border: 1px solid var(--black);
+        }
 
 
         @media (max-width: 1300px) {
@@ -114,7 +138,7 @@
 
             <!-- Sidebar (only shows on mobile) -->
             <div class="offcanvas offcanvas-start d-md-none" tabindex="-1" id="sidebarOffcanvas"
-                aria-labelledby="sidebarOffcanvasLabel" style="background-color: #fff; width: 250px;">
+                aria-labelledby="sidebarOffcanvasLabel" style="background-color:var(--white); width: 250px;">
                 <div class="offcanvas-header">
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
@@ -122,7 +146,7 @@
                 <div class="offcanvas-body d-flex flex-column p-0">
                     <div class="d-flex flex-column flex-shrink-0 p-3" style="width: 100%;">
                         <a href="/" class="d-flex align-items-center  text-decoration-none">
-                            <img src="shared/assets/img/webstar-logo-blue.png" class="img-fluid w-100 py-3 px-2" />
+                            <img src="shared/assets/img/webstar-logo-black.png" class="img-fluid w-100 py-3 px-2" />
                         </a>
 
                         <hr>
@@ -166,8 +190,10 @@
                                         Conditions</a></li>
                                 <li><a class="dropdown-item" style="font-family: var(--Regular);" href="#">Change
                                         Password</a></li>
-                                <li><a class="dropdown-item" style="font-family: var(--Regular);" href="faqs.html">FAQs</a></li>
-                                <li><a class="dropdown-item" style="font-family: var(--Regular);" href="feedback.html">Send
+                                <li><a class="dropdown-item" style="font-family: var(--Regular);"
+                                        href="faqs.html">FAQs</a></li>
+                                <li><a class="dropdown-item" style="font-family: var(--Regular);"
+                                        href="feedback.html">Send
                                         Feedback</a></li>
                                 <hr class="dropdown-divider">
                                 <li><a class="dropdown-item" style="font-family: var(--Bold);" href="profile.html"><i
@@ -191,7 +217,7 @@
                         <div class="card border-0 sidebar mx-2 p-2 overflow-y-auto" style="width: 220px;">
                             <!-- Logo -->
                             <div class="d-flex justify-content-center">
-                                <img src="shared/assets/img/webstar-logo-blue.png" class="img-fluid pt-5 pb-5 px-3"
+                                <img src="shared/assets/img/webstar-logo-black.png" class="img-fluid pt-5 pb-5 px-3"
                                     width="180px;">
                             </div>
 
@@ -252,9 +278,11 @@
                                             Conditions</a></li>
                                     <li><a class="dropdown-item" style="font-family: var(--Regular);" href="#">Change
                                             Password</a></li>
-                                    <li><a class="dropdown-item" style="font-family: var(--Regular);" href="faqs.html">FAQs</a>
+                                    <li><a class="dropdown-item" style="font-family: var(--Regular);"
+                                            href="faqs.html">FAQs</a>
                                     </li>
-                                    <li><a class="dropdown-item" style="font-family: var(--Regular);" href="feedback.html">Send
+                                    <li><a class="dropdown-item" style="font-family: var(--Regular);"
+                                            href="feedback.html">Send
                                             Feedback</a></li>
                                     <hr class="dropdown-divider">
                                     <li><a class="dropdown-item" style="font-family: var(--Bold);"
@@ -275,7 +303,8 @@
 
             <!-- Main Container Column-->
             <div class="col main-container m-0 p-0 mx-0 mx-md-2 p-0 p-md-4 overflow-y-auto">
-                <div class="card border-0 px-3 pt-3 m-0 h-100 w-100 rounded-0 shadow-none">
+                <div class="card border-0 px-3 pt-3 m-0 h-100 w-100 rounded-0 shadow-none"
+                    style="background-color: transparent;">
 
                     <!-- Navbar for mobile -->
                     <nav class="navbar navbar-light px-3 d-md-none">
@@ -289,7 +318,7 @@
 
                             <!-- Logo -->
                             <a class="navbar-brand mx-auto" href="#">
-                                <img src="shared/assets/img/webstar-logo-blue.png" alt="Webstar"
+                                <img src="shared/assets/img/webstar-logo-black.png" alt="Webstar"
                                     style="height: 40px; padding-left: 30px">
                             </a>
 
@@ -304,7 +333,8 @@
                                 <!-- Profile -->
                                 <div class="row m-0 w-100">
                                     <div class="col m-0 p-0 ">
-                                        <div class="card profile rounded-4 border-0 p-2 me-md-2">
+                                        <div class="card profile rounded-4 p-2 me-md-2"
+                                            style="border: 1px solid var(--black);">
                                             <!-- General Info -->
                                             <div class="row m-0 px-3 pt-3 pb-1 pb-md-3 d-flex align-items-center">
                                                 <div class="col-auto m-0 p-0">
@@ -321,13 +351,14 @@
                                                     <!-- Rank and Edit button (only visible on md and up) -->
                                                     <div
                                                         class="d-flex flex-column flex-sm-row gap-2 profile-pills mt-2 rank-edit-button-md">
-                                                        <span
-                                                            class="px-3 rounded-5 bg-light text-primary fw-bold d-flex align-items-center"><i
+                                                        <span class="px-3 rounded-5 fw-bold d-flex align-items-center"
+                                                            style="background-color: var(--white); color: var(--black); border: 1px solid var(--black);"><i
                                                                 class="fa-solid fa-trophy me-1"></i> Rank
                                                             5</span>
                                                         <button type="button"
-                                                            class="btn bg-light text-primary fw-bold px-3 p-0 rounded-5 d-flex align-items-center"
-                                                            data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                            class="btn fw-bold px-3 p-0 rounded-5 d-flex align-items-center"
+                                                            data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                            style="background-color: var(--white); color: var(--black); border: 1px solid var(--black);">
                                                             <i class="fa-solid fa-pen me-2"></i>Edit
                                                         </button>
 
@@ -339,10 +370,13 @@
                                             <div class="modal fade" id="exampleModal" tabindex="-1"
                                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
-                                                    <div class="modal-content">
+                                                    <div class="modal-content"
+                                                        style="border: 1px solid var(--black); background-color: var(--white);">
                                                         <div class="modal-header">
-                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Edit
-                                                                Profile</h1>
+                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                                                <strong>Edit
+                                                                    Profile</strong>
+                                                            </h1>
                                                             <button type="button" class="btn-close"
                                                                 data-bs-dismiss="modal" aria-label="Close"></button>
                                                         </div>
@@ -366,12 +400,14 @@
                                                                             <label class="form-label">Display
                                                                                 Name</label>
                                                                             <input type="text" class="form-control"
-                                                                                placeholder="Enter your name">
+                                                                                placeholder="Enter your name"
+                                                                                style="border: 1px solid var(--black);">
                                                                         </div>
                                                                         <div class="mb-3">
                                                                             <label class="form-label">Bio</label>
                                                                             <textarea class="form-control" rows="4"
-                                                                                placeholder="Write a short bio..."></textarea>
+                                                                                placeholder="Write a short bio..."
+                                                                                style="border: 1px solid var(--black);"></textarea>
                                                                         </div>
                                                                     </div>
 
@@ -380,7 +416,8 @@
                                                                 <!-- Section: My Logo Badges -->
                                                                 <div class="row">
                                                                     <h6><strong>My Logo Badges</strong></h6>
-                                                                    <div class="col-12 bg-light p-5 text-center">
+                                                                    <div class="col-12 bg-white p-5 text-center rounded-3"
+                                                                        style="border: 1px solid var(--black);">
                                                                         <button class="btn btn-dark">Applied</button>
                                                                     </div>
                                                                 </div>
@@ -410,13 +447,14 @@
                                                 <!-- Rank and Edit button (for smaller screens) -->
                                                 <div
                                                     class="d-flex flex-row gap-2 profile-pills m-0 mt-2 d-flex justify-content-center">
-                                                    <span
-                                                        class="px-3 rounded-5 bg-light text-primary fw-bold d-flex align-items-center"><i
+                                                    <span class="px-3 rounded-5 fw-bold d-flex align-items-center"
+                                                        style="background-color: var(--white); color: var(--black); border: 1px solid var(--black);"><i
                                                             class="fa-solid fa-trophy me-2"></i> Rank
                                                         5</span>
                                                     <button type="button"
-                                                        class="btn bg-light text-primary fw-bold p-0 px-3 rounded-5 d-flex align-items-center"
-                                                        data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                        class="btn fw-bold p-0 px-3 rounded-5 d-flex align-items-center"
+                                                        data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                        style="background-color: var(--white); color: var(--black); border: 1px solid var(--black);">
                                                         <i class="fa-solid fa-pen me-2"></i>Edit
                                                     </button>
 
@@ -424,8 +462,8 @@
                                             </div>
                                             <!-- Stats -->
                                             <div class="row px-4 mt-3 mb-2 d-none d-md-block">
-                                                <div
-                                                    class="bg-white text-primary rounded-3 p-3 px-5 d-flex justify-content-between align-items-center text-center">
+                                                <div class="rounded-3 p-3 px-5 d-flex justify-content-between align-items-center text-center"
+                                                    style="background-color: var(--white); color: var(--black); border: 1px solid var(--black);">
                                                     <div class="flex-fill">
                                                         <div style="font-family: var(--Black); font-size: 1.25rem;">340
                                                         </div>
@@ -449,8 +487,8 @@
                                             </div>
 
                                             <!-- Stats for Small Screen -->
-                                            <div
-                                                class="row text-white px-4 mt-3 mb-3 d-md-none d-flex justify-content-between align-items-center text-center">
+                                            <div class="row px-4 mt-3 mb-3 d-md-none d-flex justify-content-between align-items-center text-center"
+                                                style="color: var(--black);">
 
                                                 <div class="col-4 stats-text">
                                                     <div style="font-family: var(--Black); font-size: 1.25rem;">340
@@ -477,17 +515,20 @@
                                             <div class="modal fade" id="followingsModal" tabindex="-1"
                                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
-                                                    <div class="modal-content">
+                                                    <div class="modal-content"
+                                                        style="border: 1px solid var(--black); background-color: var(--white);">
                                                         <div class="modal-header">
                                                             <h1 class="modal-title fs-5" id="exampleModalLabel">
-                                                                Followings · 50</h1>
+                                                                <strong>Followings · 50</strong>
+                                                            </h1>
                                                             <button type="button" class="btn-close"
                                                                 data-bs-dismiss="modal" aria-label="Close"></button>
                                                         </div>
                                                         <div class="modal-body"
                                                             style="max-height: 500px; overflow-y: auto;">
                                                             <ul class="list-group">
-                                                                <li class="list-group-item px-4 py-3">
+                                                                <li class="list-group-item px-4 py-3"
+                                                                    style=" background-color: var(--white);">
                                                                     <div class="d-flex align-items-center">
                                                                         <div class="rounded-circle bg-primary me-3"
                                                                             style="width: 40px; height: 40px;"></div>
@@ -497,7 +538,8 @@
                                                                         </div>
                                                                     </div>
                                                                 </li>
-                                                                <li class="list-group-item px-4 py-3">
+                                                                <li class="list-group-item px-4 py-3"
+                                                                    style=" background-color: var(--white);">
                                                                     <div class="d-flex align-items-center">
                                                                         <div class="rounded-circle bg-primary me-3"
                                                                             style="width: 40px; height: 40px;"></div>
@@ -507,7 +549,8 @@
                                                                         </div>
                                                                     </div>
                                                                 </li>
-                                                                <li class="list-group-item px-4 py-3">
+                                                                <li class="list-group-item px-4 py-3"
+                                                                    style=" background-color: var(--white);">
                                                                     <div class="d-flex align-items-center">
                                                                         <div class="rounded-circle bg-primary me-3"
                                                                             style="width: 40px; height: 40px;"></div>
@@ -516,13 +559,14 @@
                                                                             <small class="text-muted">@johndoe</small>
                                                                         </div>
                                                                         <span
-                                                                            class="badge bg-primary text-white fw-semibold px-3 py-2 rounded-pill ms-4"
-                                                                            style="font-size: 0.75rem;">
+                                                                            class="badge fw-semibold px-3 py-2 rounded-pill ms-4"
+                                                                            style="font-size: 0.75rem; background-color: var(--primaryColor); color: var(--black);">
                                                                             Follows you
                                                                         </span>
                                                                     </div>
                                                                 </li>
-                                                                <li class="list-group-item px-4 py-3">
+                                                                <li class="list-group-item px-4 py-3"
+                                                                    style=" background-color: var(--white);">
                                                                     <div class="d-flex align-items-center">
                                                                         <div class="rounded-circle bg-primary me-3"
                                                                             style="width: 40px; height: 40px;"></div>
@@ -532,7 +576,8 @@
                                                                         </div>
                                                                     </div>
                                                                 </li>
-                                                                <li class="list-group-item px-4 py-3">
+                                                                <li class="list-group-item px-4 py-3"
+                                                                    style=" background-color: var(--white);">
                                                                     <div class="d-flex align-items-center">
                                                                         <div class="rounded-circle bg-primary me-3"
                                                                             style="width: 40px; height: 40px;"></div>
@@ -542,7 +587,8 @@
                                                                         </div>
                                                                     </div>
                                                                 </li>
-                                                                <li class="list-group-item px-4 py-3">
+                                                                <li class="list-group-item px-4 py-3"
+                                                                    style=" background-color: var(--white);">
                                                                     <div class="d-flex align-items-center">
                                                                         <div class="rounded-circle bg-primary me-3"
                                                                             style="width: 40px; height: 40px;"></div>
@@ -552,7 +598,8 @@
                                                                         </div>
                                                                     </div>
                                                                 </li>
-                                                                <li class="list-group-item px-4 py-3">
+                                                                <li class="list-group-item px-4 py-3"
+                                                                    style=" background-color: var(--white);">
                                                                     <div class="d-flex align-items-center">
                                                                         <div class="rounded-circle bg-primary me-3"
                                                                             style="width: 40px; height: 40px;"></div>
@@ -573,17 +620,20 @@
                                             <div class="modal fade" id="followersModal" tabindex="-1"
                                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
-                                                    <div class="modal-content">
+                                                    <div class="modal-content"
+                                                        style="border: 1px solid var(--black); background-color: var(--white);">
                                                         <div class="modal-header">
                                                             <h1 class="modal-title fs-5" id="exampleModalLabel">
-                                                                Followers · 50</h1>
+                                                                <strong>Followers · 50</strong>
+                                                            </h1>
                                                             <button type="button" class="btn-close"
                                                                 data-bs-dismiss="modal" aria-label="Close"></button>
                                                         </div>
                                                         <div class="modal-body"
                                                             style="max-height: 500px; overflow-y: auto;">
                                                             <ul class="list-group">
-                                                                <li class="list-group-item px-4 py-3">
+                                                                <li class="list-group-item px-4 py-3"
+                                                                    style="background-color: var(--white);">
                                                                     <div class="d-flex align-items-center">
                                                                         <div class="rounded-circle bg-primary me-3"
                                                                             style="width: 40px; height: 40px;"></div>
@@ -593,7 +643,8 @@
                                                                         </div>
                                                                     </div>
                                                                 </li>
-                                                                <li class="list-group-item px-4 py-3">
+                                                                <li class="list-group-item px-4 py-3"
+                                                                    style="background-color: var(--white);">
                                                                     <div class="d-flex align-items-center">
                                                                         <div class="rounded-circle bg-primary me-3"
                                                                             style="width: 40px; height: 40px;"></div>
@@ -603,7 +654,8 @@
                                                                         </div>
                                                                     </div>
                                                                 </li>
-                                                                <li class="list-group-item px-4 py-3">
+                                                                <li class="list-group-item px-4 py-3"
+                                                                    style="background-color: var(--white);">
                                                                     <div class="d-flex align-items-center">
                                                                         <div class="rounded-circle bg-primary me-3"
                                                                             style="width: 40px; height: 40px;"></div>
@@ -613,7 +665,8 @@
                                                                         </div>
                                                                     </div>
                                                                 </li>
-                                                                <li class="list-group-item px-4 py-3">
+                                                                <li class="list-group-item px-4 py-3"
+                                                                    style="background-color: var(--white);">
                                                                     <div class="d-flex align-items-center">
                                                                         <div class="rounded-circle bg-primary me-3"
                                                                             style="width: 40px; height: 40px;"></div>
@@ -638,7 +691,7 @@
                                 <div class="row m-0 w-100 mt-2 flex-grow-1">
                                     <div class="col m-0 p-0">
                                         <div
-                                            class="card logo-badge rounded-4 border-0 p-2 me-md-2 h-100 d-flex justify-content-center align-items-center">
+                                            class="card progress rounded-4 border-0 p-2 me-md-2 h-100 d-flex justify-content-center align-items-center">
                                             <img src="shared/assets/img/badge.png" class="h-auto w-100"
                                                 style="max-height: 100%;">
                                         </div>
@@ -651,29 +704,29 @@
 
                             <!-- Second Column -->
                             <div class="col-12 col-md-6 m-0 second-column">
-                                <div class="card logo-badge rounded-4 border-0">
+                                <div class="card logo-badge rounded-4">
                                     <!-- Currently Learning -->
                                     <div class="row m-0 w-100 px-4 py-3">
                                         <h5 class="text-white m-0 p-0 mt-2 mb-2">
                                             Currently learning
                                         </h5>
                                         <div
-                                            class="card px-5 py-4 bg-transparent rounded-4 text-white border-white mt-2 course-info-col">
+                                            class="card px-5 py-4 rounded-4 text-white mt-2 course-info-col" style="border: 1px solid var(--black) !important; background-color: var(--white);">
                                             <div class="row d-flex align-items-center">
                                                 <!-- Course Name -->
                                                 <div class="col-md-3 col-12 m-0 p-0 text-center text-md-start course-name-col"
-                                                    style="font-family: var(--Bold);">
+                                                    style="font-family: var(--Bold); ">
                                                     <h4 class="m-0 p-0 course-name-text">HTML Course</h4>
                                                 </div>
                                                 <!-- Course Progress -->
                                                 <div class="col-md-9 col-12 progress-bar-col">
-                                                    <div class="progress rounded-3 border border-white mt-2"
+                                                    <div class="progress rounded-3 mt-2"
                                                         role="progressbar" aria-label="Basic example" aria-valuenow="25"
                                                         aria-valuemin="0" aria-valuemax="100"
-                                                        style="height: 15px; background-color: transparent;">
+                                                        style="height: 15px; background-color: transparent; border: 1px solid var(--black)">
 
                                                         <div class="progress-bar"
-                                                            style="width: 60%; background-color: rgb(255, 255, 255);">
+                                                            style="width: 60%; background-color: var(--highlight)">
                                                         </div>
                                                     </div>
                                                     <div
@@ -695,7 +748,7 @@
                                             </h5>
 
                                             <div class="d-flex justify-content-center align-items-center"
-                                                style="height:600px;">
+                                                style="height:400px;">
                                                 <h5 class="text-white m-0">
                                                     No badges yet.
                                                 </h5>
@@ -717,38 +770,38 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const currentPath = window.location.pathname.split("/").pop(); 
-                const pageMap = {
-                    "index.html": "home",
-                    "course.html": "course",
-                    "explore.html": "explore",
-                    "shop.html": "shop",
-                    "miniGames.html": "minigames"
-                };
+        document.addEventListener("DOMContentLoaded", function () {
+            const currentPath = window.location.pathname.split("/").pop();
+            const pageMap = {
+                "index.html": "home",
+                "course.html": "course",
+                "explore.html": "explore",
+                "shop.html": "shop",
+                "miniGames.html": "minigames"
+            };
 
-                const activePage = pageMap[currentPath];
-                const navItems = document.querySelectorAll('[data-page]');
+            const activePage = pageMap[currentPath];
+            const navItems = document.querySelectorAll('[data-page]');
 
-                navItems.forEach(item => {
-                    const page = item.getAttribute('data-page');
-                    const link = item.querySelector('a');
-                    const img = item.querySelector('img');
+            navItems.forEach(item => {
+                const page = item.getAttribute('data-page');
+                const link = item.querySelector('a');
+                const img = item.querySelector('img');
 
-                    if (page === activePage) {
-                        item.classList.add("selected-box");
-                        link.classList.add("selected");
-                        const src = img.getAttribute("src").replace(".png", "-w.png");
-                        img.setAttribute("src", src);
-                    } else {
-                        item.classList.remove("selected-box");
-                        link.classList.remove("selected");
-                        const src = img.getAttribute("src").replace("-w.png", ".png");
-                        img.setAttribute("src", src);
-                    }
-                });
+                if (page === activePage) {
+                    item.classList.add("selected-box");
+                    link.classList.add("selected");
+                    const src = img.getAttribute("src").replace(".png", ".png");
+                    img.setAttribute("src", src);
+                } else {
+                    item.classList.remove("selected-box");
+                    link.classList.remove("selected");
+                    const src = img.getAttribute("src").replace(".png", ".png");
+                    img.setAttribute("src", src);
+                }
             });
-        </script>
+        });
+    </script>
 </body>
 
 

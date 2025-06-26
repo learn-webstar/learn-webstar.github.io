@@ -21,7 +21,7 @@
 
             <!-- Sidebar (only shows on mobile) -->
             <div class="offcanvas offcanvas-start d-md-none" tabindex="-1" id="sidebarOffcanvas"
-                aria-labelledby="sidebarOffcanvasLabel" style="background-color: #fff; width: 250px;">
+                aria-labelledby="sidebarOffcanvasLabel" style="background-color:var(--white); width: 250px;">
                 <div class="offcanvas-header">
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
@@ -100,7 +100,7 @@
                         <div class="card border-0 sidebar mx-2 p-2 overflow-y-auto" style="width: 220px;">
                             <!-- Logo -->
                             <div class="d-flex justify-content-center">
-                                <img src="shared/assets/img/webstar-logo-blue.png" class="img-fluid pt-5 pb-5 px-3"
+                                <img src="shared/assets/img/webstar-logo-black.png" class="img-fluid pt-5 pb-5 px-3"
                                     width="180px;">
                             </div>
 
@@ -198,7 +198,7 @@
 
                             <!-- Logo -->
                             <a class="navbar-brand mx-auto" href="#">
-                                <img src="shared/assets/img/webstar-logo-blue.png" alt="Webstar"
+                                <img src="shared/assets/img/webstar-logo-black.png" alt="Webstar"
                                     style="height: 40px; padding-left: 30px">
                             </a>
 
@@ -455,12 +455,12 @@
                 if (page === activePage) {
                     item.classList.add("selected-box");
                     link.classList.add("selected");
-                    const src = img.getAttribute("src").replace(".png", "-w.png");
+                    const src = img.getAttribute("src").replace(".png", ".png");
                     img.setAttribute("src", src);
                 } else {
                     item.classList.remove("selected-box");
                     link.classList.remove("selected");
-                    const src = img.getAttribute("src").replace("-w.png", ".png");
+                    const src = img.getAttribute("src").replace(".png", ".png");
                     img.setAttribute("src", src);
                 }
             });
