@@ -86,16 +86,18 @@
     font-family: var(--Bold);
 }
 
+
 @media (max-width: 767.98px) {
     .statusBar {
         font-size: .90em;
         justify-content: start;
     }
-    .cardGame {
-    padding: 1rem !important;
-  }
 
-  .btn {
+    .cardGame {
+        padding: 1rem !important;
+    }
+
+    .btn {
         padding: 0.25rem 2rem !important;
     }
 }
