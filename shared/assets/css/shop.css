@@ -212,3 +212,6 @@
     }
 }
 
+.no-items-yet{
+    font-family: var(--Regular);
+}

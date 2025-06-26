@@ -362,7 +362,7 @@
             if (label.toLowerCase() === 'my items') {
                 if (bought.length === 0) {
                     const msg = document.createElement('div');
-                    msg.className = 'w-100 text-center py-5 text-muted';
+                    msg.className = 'w-100 text-center py-5 text-muted no-items-yet';
                     msg.style.minHeight = '200px';
                     msg.textContent = 'You have no items yet.';
                     cardGrid.appendChild(msg);
