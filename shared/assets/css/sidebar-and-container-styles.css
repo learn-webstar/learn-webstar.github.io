@@ -54,9 +54,11 @@ html, body {
 
 .selected-box {
     background-color: var(--primaryColor) !important;
+    border: 1px solid var(--black) !important;
 }
 
 .selected-box-course {
     background-color: var(--primaryColor) !important;
+    border: 1px solid var(--black) !important;
 }
 
