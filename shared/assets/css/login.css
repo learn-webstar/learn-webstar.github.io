@@ -1,5 +1,5 @@
         body {
-            background-color: var(--lightBlue);
+            background-color: var(--black);
             font-family: var(--Regular);
         }
 
@@ -43,8 +43,18 @@
             font-size: 22px;
         }
 
+        .btn-login:hover {
+            background-color: var(--highlight) !important;
+            color: var(--white) !important;
+        }
+
         .login-form {
             max-width: 75% !important;
+        }
+
+        .highlight:hover {
+            transition: ease-in 0.2s;
+            color: var(--highlight) !important;
         }
 
         /*Responsiveness*/
@@ -80,6 +90,10 @@
 
             .logo {
                 width: 235px;
+            }
+            
+            .text-small {
+                font-size: 14px;
             }
         }
 
