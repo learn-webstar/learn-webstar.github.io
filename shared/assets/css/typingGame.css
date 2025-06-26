@@ -94,5 +94,8 @@
     .cardGame {
     padding: 1rem !important;
   }
-}
 
+  .btn {
+        padding: 0.25rem 2rem !important;
+    }
+}
