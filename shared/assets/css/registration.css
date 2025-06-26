@@ -6,16 +6,16 @@ body {
 .border-blue {
     border-style: solid;
     border-width: 0.5px;
-    border-color: var(--blue);
+    border-color: #2C2C2C;
 }
 
 .text-blue {
-    color: var(--blue);
+    color: #2C2C2C;
+    font-weight: bold;
 }
 
 .btn-register {
-    background-color: var(--blue);
-    color: var(--white);
+    color:  #2C2C2C;
     font-size: 22px;
 }
 
@@ -36,7 +36,7 @@ body {
 }
 
 .password-toggle-btn:hover {
-    color: #2866e4;
+    color: #FDE29C;
 }
 
 .password-field-container .form-control {
@@ -45,7 +45,7 @@ body {
 
 @media (max-width: 767.98px) {
     .container-fluid > .row {
-        background: #2866e4;
+        background: #FFF9F0;
         border-radius: 1.5rem !important;
         min-height: 100vh;
         box-shadow: none !important;
@@ -54,13 +54,13 @@ body {
     .col-md-6 {
         max-width: 100% !important;
         flex: 0 0 100%;
-        background: #2866e4 !important;
+        background: #FFF9F0 !important;
         border-radius: 1.5rem 1.5rem 0 0 !important;
     }
     .col-md-7 {
         max-width: 100% !important;
         flex: 0 0 100%;
-        background: #fff !important;
+        background: #FFF9F0 !important;
         border-radius: 1.5rem !important;
         box-shadow: none !important;
     }
@@ -69,14 +69,14 @@ body {
 @media (max-width: 576px) {
   html, body {
     overflow: hidden !important;
-    background: #dbe8fd !important;
+    background: #2C2C2C !important;
     height: 100vh !important;
     box-sizing: border-box !important;
   }
   .container-fluid {
     padding: 24px !important;
     min-height: 100vh !important;
-    background: #dbe8fd !important;
+    background: #2C2C2C !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -90,7 +90,7 @@ body {
     border-radius: 1.5rem !important;
     box-shadow: 0 0.5rem 1rem rgba(0,0,0,.10);
     overflow: hidden !important;
-    background: #fff !important;
+    background: #FFF9F0 !important;
     min-height: unset !important;
     height: auto !important;
     flex-direction: column !important;
@@ -100,7 +100,7 @@ body {
     width: 100% !important;
     max-width: 100% !important;
     padding: 28px 0 20px 0 !important;
-    background: #2866e4 !important;
+    background: #FDE29C !important;
     border-radius: 1.5rem 1.5rem 0 0 !important;
     display: flex !important;
     align-items: center !important;
@@ -147,7 +147,7 @@ body {
   .container-fluid {
     padding: 40px 0 !important;
     min-height: 100vh !important;
-    background: #dbe8fd !important;
+    background: #2C2C2C!important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -159,7 +159,7 @@ body {
     margin: 0 auto !important;
     border-radius: 1.5rem !important;
     overflow: hidden !important;
-    background: #fff !important;
+    background: #FFF9F0 !important;
     min-height: unset !important;
     height: auto !important;
     flex-direction: column !important;
@@ -169,7 +169,7 @@ body {
     width: 100% !important;
     max-width: 100% !important;
     padding: 36px 0 28px 0 !important;
-    background: #2866e4 !important;
+    background: #FDE29C !important;
     border-radius: 1.5rem 1.5rem 0 0 !important;
     display: flex !important;
     align-items: center !important;
@@ -209,4 +209,21 @@ body {
   .registration-form-col .text-center {
     font-size: 1.1rem !important;
   }
+}
+
+.registration-form-col input {
+    border: 1px solid var(--black) !important;
+    color: var(--black);
+}
+
+.btn.btn-primary {
+    background-color: #FDE29C !important;
+    color: #2C2C2C !important; /* (optional) for dark text */
+    border: none; /* (optional) removes border */
+}
+
+.registration-form-col input:focus,
+.btn.btn-primary:focus {
+    box-shadow: none !important;
+    outline: none !important;
 }

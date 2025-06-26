@@ -73,6 +73,26 @@
     z-index: -1;
 }
 
+.custom-dropdown-button {
+    background-color: var(--primaryColor);
+    border: 1px solid var(--black);
+    color: var(--black);
+    font-family: var(--Regular);
+}
+
+.custom-dropdown-button:hover,
+.custom-dropdown-button:focus {
+    background-color: var(--primaryColor);
+    border: 1px solid var(--black);
+    color: var(--black);
+    box-shadow: none;
+}
+
+.dropdown-item.selected {
+    background-color: var(--highlight) !important;
+    color: var(--white) !important;
+}
+
 .title {
     font-family: var(--Bold);
     color: var(--black);
@@ -87,6 +107,11 @@
 .dropdown-item {
     font-family: var(--Regular);
     color: var(--black);
+}
+
+.dropdown-menu {
+    max-height: 300px;
+    overflow-y: auto;
 }
 
 /* === Custom Modal Styles === */
@@ -121,6 +146,10 @@
 .cardModal{
     background-color: var(--primaryColor);
     border: 1px solid var(--black);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-divider {
@@ -182,3 +211,4 @@
         width: 100%;
     }
 }
+
