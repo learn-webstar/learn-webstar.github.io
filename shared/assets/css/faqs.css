@@ -1,7 +1,7 @@
 .faq-heading {
   color: #2563EB;
   font-weight: 700;
-  font-size: 60px;
+  font-size: 1.5em;
   font-family: var(--Bold);
 }
 
@@ -22,7 +22,7 @@
   background-color: transparent;
   transition: background-color 0.3s ease, color 0.3s ease;
   color: #111E2C;
-  font-size: 25px;
+  font-size: 1em;
   font-family: var(--Regular);
 }
 
@@ -47,7 +47,7 @@
   background-color: var(--blue);
   color: var(--white);
   font-weight: 500;
-  font-size: 20px;
+  font-size: 1em;
   font-family: var(--Regular);
 }
 
