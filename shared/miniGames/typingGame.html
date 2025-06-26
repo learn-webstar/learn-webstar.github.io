@@ -189,7 +189,7 @@
 
 
             <!-- Main Container Column-->
-            <div class="col main-container m-0 p-0 mx-2 p-4 position-relative overflow-y-auto">
+            <div class="col main-container m-0 p-0 mx-2 p-4 position-relative  overflow-y-auto">
                 <div id="countdownOverlay">
                     <div id="countdownNumber">3</div>
                 </div>
@@ -215,7 +215,7 @@
                     </nav>
 
                     <!-- PUT CONTENT HERE -->
-                    <div class="container pt-3 overflow-y-auto">
+                    <div class="container pt-3  overflow-y-auto">
                         <div class="progress mb-5">
                             <div id="progressBar" class="progressBar" role="progressbar">
                             </div>
@@ -256,7 +256,7 @@
                 '<form class="needs-validation" novalidate></form>',
                 '<ul class="list-group"><li class="list-group-item">Item 1</li></ul>',
                 '<div class="card"><div class="card-body">Card text</div></div>',
-                '<footer class="text-center p-3">© 2025 Webstar</footer>',
+                '<footer class="text-center p-3"> 2025 Webstar</footer>',
                 '<div class="alert alert-danger">Error occurred</div>',
                 '<progress class="progress-bar" value="50" max="100"></progress>',
                 '<button class="btn btn-outline-info">More Info</button>',
@@ -348,6 +348,7 @@
 
             let countdown = 3;
             countdownNumber.textContent = countdown;
+
             const countdownInterval = setInterval(() => {
                 countdown--;
                 if (countdown > 0) {
@@ -355,9 +356,14 @@
                 } else {
                     clearInterval(countdownInterval);
                     countdownOverlay.style.display = "none";
-                    startGame();
+
+                    requestAnimationFrame(() => {
+                        inputText.focus();
+                        startGame();
+                    });
                 }
             }, 1000);
+
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
