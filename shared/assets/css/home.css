@@ -15,7 +15,7 @@
 
 .containerCard {
     border-radius: 25px;
-    border-color: var(--blue);
+    border-color: var(--black);
 }
 
 
@@ -29,21 +29,26 @@
     border-radius: 25px;
     background-color: transparent;
     padding: 1rem;
-    color: var(--blue);
-    border-color: var(--blue);
+    color: var(--black);
+    border-color: var(--black);
+    background-color: var(--white1);
 }
 
 .achievementCard {
     border-radius: 25px;
-    border-color: var(--blue);
+    border-color: var(--black);
     display: flex;
     align-items: center;
     justify-content: center;
     padding-right: 400px;
 }
 
+.cProgress-text {
+    color: var(--black);
+}
+
 .blueColorText {
-    color: var(--blue);
+    color: var(--black);
 }
 
 .blueColorText1 {
@@ -60,25 +65,25 @@
 }
 
 .blueColorText3 {
-    color: var(--blue);
+    color: var(--black);
     font-size: 0.9em;
     font-family: var(--Bold);
     line-height: 2;
 }
 
 .whiteColorText {
-    color: var(--white);
+    color: var(--black);
 }
 
 .calenderCard {
-    color: var(--blue);
-    border-color: var(--blue);
+    color: var(--black);
+    border-color: var(--black);
     border-radius: 25px;
     height: 135px;
 }
 
 .blueCard {
-    background-color: var(--blue);
+    background-color: var(--black);
 }
 
 .blueCard1 {
@@ -89,8 +94,9 @@
 }
 
 .cycContainerCard {
-    background-color: var(--blue);
-    color: var(--white);
+    background-color: var(--white1);
+    color: var(--black);
+    border-color: var(--black);
     border-radius: 20px;
     height: 100%;
     padding-left: 35px !important;
@@ -100,38 +106,32 @@
 .imageProfile {
     width: 80px;
     height: 80px;
-    background-color: var(--white);
+    background-color: var(--primaryColor);
     border-radius: 30px;
     align-self: center;
 }
 
 .htmlText {
     font-size: 18px;
+    color: var(--black);
 }
 
 .addImageText {
     font-size: 24px;
+    color: var(--black);
 }
 
 .continueButton {
-    background-color: var(--white);
-    border-radius: 25px;
-    text-decoration: none;
+    background-color: var(--primaryColor) !important;
     color: var(--black) !important;
-    transition: none !important;
-}
-
-.continueButton {
-    background-color: var(--white) !important;
-    color: var(--black) !important;
-    border: 1px solid var(--blue) !important;
+    border: 1px solid var(--black) !important;
     border-radius: 25px;
     transition: none !important;
     text-decoration: none !important;
 }
 
 .continueButton:hover {
-    background-color: var(--white) !important;
+    background-color: var(--highlight) !important;
     color: var(--black) !important;
     box-shadow: none !important;
     outline: none !important;
