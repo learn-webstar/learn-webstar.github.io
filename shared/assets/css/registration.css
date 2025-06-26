@@ -221,3 +221,9 @@ body {
     color: #2C2C2C !important; /* (optional) for dark text */
     border: none; /* (optional) removes border */
 }
+
+.registration-form-col input:focus,
+.btn.btn-primary:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
