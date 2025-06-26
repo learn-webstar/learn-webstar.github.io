@@ -1,7 +1,11 @@
 .container {
-        background: var(--white);
+        background: #FFF9F0;
         border-radius: 20px;
         position: relative;
+    }
+
+    .card {
+        background: #FFF9F0 !important;
     }
 
     .searchbar-container {
@@ -16,7 +20,7 @@
         align-items: center;
         border-radius: 15px;
         overflow: hidden;
-        border: 1.5px solid var(--blue);
+        border: 1.5px solid #2C2C2C;
         background: var(--white);
     }
 
@@ -24,32 +28,59 @@
         padding: 0 12px;
         display: flex;
         align-items: center;
+        background: transparent;
     }
 
     .searchbar-icon .bi {
-        color: var(--blue);
+        color: #FF6B6B;
         font-size: 1.2rem;
     }
 
     .explore-search-input {
         font-size: 1.2rem;
-        background: var(--white);
+        background: transparent;
         flex: 1;
-        color: var(--blue);
+        color: #2C2C2C;
         font-family: 'DM Sans SemiBold';
         font-weight: 700;
     }
 
     .explore-search-input::placeholder {
-        color: var(--blue);
+        color: #2C2C2C;
         opacity: 1; 
         font-family: 'DM Sans SemiBold';
         font-weight: 700;
     }
 
+    .explore-search-input:focus {
+        outline: none;
+        box-shadow: none;
+        border: none;
+        background: transparent;
+    }
+
     .user-list {
         max-height: 70vh;
         overflow-y: auto;
+    }
+
+    /* Custom scrollbar styling */
+    .user-list::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .user-list::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+
+    .user-list::-webkit-scrollbar-thumb {
+        background: #FF6B6B;
+        border-radius: 10px;
+    }
+
+    .user-list::-webkit-scrollbar-thumb:hover {
+        background: #ff5252;
     }
 
     .user-list .user-row {
@@ -61,7 +92,7 @@
     .user-list .avatar {
         width: 48px;
         height: 48px;
-        background: var(--blue);
+        background: #FDE29C;
         border-radius: 50%;
         margin-right: 1rem;
     }
@@ -82,6 +113,6 @@
     .user-list hr {
         margin: 0;
         border: none;
-        border-top: 1.5px solid var(--blue);
+        border-top: 1.5px solid #2C2C2C;
     }
 
