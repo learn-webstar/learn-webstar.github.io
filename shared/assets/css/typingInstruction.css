@@ -1,6 +1,6 @@
 .header{
     font-family: var(--Bold);
-    color: var(--blue);
+    color: var(--highlight);
     font-size: 2.5em;
 }
 
@@ -8,4 +8,17 @@
     font-family: var(--Regular);
     color: var(--black);
     font-size: 1.2em;
+}
+
+.btn{
+    border: 1px solid var(--black);
+    background-color: var(--highlight);
+    font-family: var(--Bold);
+    color: var(--white);
+}
+
+.btn:hover {
+    border: 1px solid var(--black);
+    background-color: var(--primaryColor);
+    color: var(--black);
 }
