@@ -1,5 +1,5 @@
         body {
-            background-color: var(--lightBlue);
+            background-color: var(--black);
             font-family: var(--Regular);
         }
 
@@ -9,26 +9,52 @@
             background-color: var(--white);
         }
 
+        .password-toggle-btn {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #6c757d;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .password-toggle-btn:hover {
+            color: var(--primaryColor);
+        }
+
         /*Border Color*/
         .border-blue {
             border-style: solid;
             border-width: 0.5px;
-            border-color: var(--blue);
+            border-color: var(--black);
         }
 
         /*Font Color*/
         .text-blue {
-            color: var(--blue);
+            color: var(--primaryColor);
         }
 
         .btn-login {
-            background-color: var(--blue);
+            background-color: var(--primaryColor);
             color: var(--white);
             font-size: 22px;
         }
 
+        .btn-login:hover {
+            background-color: var(--highlight) !important;
+            color: var(--white) !important;
+        }
+
         .login-form {
             max-width: 75% !important;
+        }
+
+        .highlight:hover {
+            transition: ease-in 0.2s;
+            color: var(--highlight) !important;
         }
 
         /*Responsiveness*/
@@ -65,6 +91,10 @@
             .logo {
                 width: 235px;
             }
+            
+            .text-small {
+                font-size: 14px;
+            }
         }
 
         @media screen and (max-width: 430px) {
@@ -87,6 +117,6 @@
             }
         }
 
-        .input-style{
+        .input-style {
             padding-left: 20px !important;
         }

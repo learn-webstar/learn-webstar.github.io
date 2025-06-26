@@ -1,5 +1,5 @@
 .faq-heading {
-  color: #2563EB;
+  color: var(--black);
   font-weight: 700;
   font-size: 1.5em;
   font-family: var(--Bold);
@@ -21,19 +21,19 @@
   cursor: pointer;
   background-color: transparent;
   transition: background-color 0.3s ease, color 0.3s ease;
-  color: #111E2C;
+  color: var(--black);
   font-size: 1em;
   font-family: var(--Regular);
 }
 
 .faq-item summary:hover {
-  background-color: var(--blue);
-  color: var(--white);
+  background-color: var(--primaryColor);
+  color: var(--black);
 }
 
 .faq-item[open] summary {
-  background-color: var(--blue);
-  color: var(--white);
+  background-color: var(--primaryColor);
+  color: var(--black);
 }
 
 .faq-item summary::-webkit-details-marker {
@@ -44,8 +44,8 @@
   margin-top: 8px;
   padding: 16px;
   border-radius: 8px;
-  background-color: var(--blue);
-  color: var(--white);
+  background-color: var(--primaryColor);
+  color: var(--black);
   font-weight: 500;
   font-size: 1em;
   font-family: var(--Regular);

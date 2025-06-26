@@ -5,8 +5,8 @@ body {
 /*Containers*/
 .box,
 .course {
-    background-color: var(--blue);
-    color: var(--white);
+    background-color: var(--primaryColor);
+    color: var(--black);
     border-radius: 20px;
 }
 
@@ -16,7 +16,7 @@ body {
     border-radius: 20px;
     border-style: solid;
     border-width: 1px;
-    border-color: var(--blue);
+    border-color: var(--black);
 }
 
 .grid-container {
@@ -35,7 +35,7 @@ body {
     border-style: solid;
     border-width: 1px;
     border-radius: 20px;
-    border-color: var(--blue);
+    border-color: var(--black);
 }
 
 /*Texts*/
@@ -58,6 +58,8 @@ body {
 
 .continue-course-container {
     border-radius: 20px;
+    border-color: var(--black) !important;
+    background-color: white;
 }
 
 .course-title,
@@ -70,7 +72,7 @@ body {
 }
 
 .text-blue {
-    color: var(--blue) !important;
+    color: var(--primaryColor) !important;
 }
 
 /*Progress Bar*/
@@ -78,10 +80,11 @@ body {
     background-color: transparent;
     height: 10px;
     border-radius: 20px;
+    border-color: var(--black) !important;
 }
 
 .progress {
-    background-color: var(--white);
+    background-color: var(--highlight);
 }
 
 /*Images*/
@@ -110,6 +113,10 @@ body {
 .continue-btn {
     background-color: var(--white);
     border-radius: 20px;
+}
+
+.cursor-point:hover {
+    cursor: pointer;
 }
 
 /*Media Queries*/
