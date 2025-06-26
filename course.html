@@ -222,27 +222,26 @@
                                                     </div>
                                                     <div class="m-auto">
                                                         <div class="course-title">CSS Course</div>
-                                                        <div class="fw-bold text-dark lesson-title">Colors and
-                                                            Backgrounds</div>
+                                                        <div class="fw-bold text-dark lesson-title">Fonts and Formatting</div>
                                                     </div>
-                                                    <img src="shared/assets/img/keyboard_arrow_right.png"
+                                                    <a href="lesson.html"><img src="shared/assets/img/courses/keyboard_arrow_right.png"
                                                         alt="arrow"
                                                         class="d-none d-sm-block d-lg-none d-xl-block img-fluid ms-auto arrow"
-                                                        width="120px">
+                                                        width="120px"></a>
                                                 </div>
                                                 <div class="mt-sm-3">
                                                     <div class="w-100 mx-auto mt-2 border progress-bar">
-                                                        <div class="w-50 progress"></div>
+                                                        <div class="progress"></div>
                                                     </div>
                                                     <div class="d-flex justify-content-between">
                                                         <p class="mt-2 mb-0 progress-text">Course Progress</p>
-                                                        <p class="mt-2 mb-0 progress-text">50%</p>
+                                                        <p class="mt-2 mb-0 progress-text">37.5%</p>
                                                     </div>
                                                 </div>
                                                 <div
                                                     class="d-flex d-lg-flex justify-content-center d-sm-none d-lg-block d-xl-none mt-2">
                                                     <div class="btn text-center w-75 border continue-btn fw-bold">
-                                                        Continue</div>
+                                                        <a href="lesson.html" class="text-decoration-none text-white">Continue</a></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -319,12 +318,12 @@
                                                                         <div class="mt-sm-3">
                                                                             <div
                                                                                 class="w-100 mx-auto mt-2 border progress-bar">
-                                                                                <div class="w-50 progress"></div>
+                                                                                <div class="progress"></div>
                                                                             </div>
                                                                             <div class="d-flex justify-content-between">
                                                                                 <p class="mt-2 mb-0 done-text">Course
                                                                                     Progress</p>
-                                                                                <p class="mt-2 mb-0 done-text">50%</p>
+                                                                                <p class="mt-2 mb-0 done-text">37.5%</p>
                                                                             </div>
                                                                         </div>
                                                                         <!--<div class="row">
@@ -363,34 +362,34 @@
                                     <div id="lessonContainer"
                                         class="lessons-container px-4 p-3 py-md-5 lesson-available overflow-y-auto flex-grow-1 text-center">
                                         <div class="h5 mb-3 fw-bold">CSS Lessons</div>
-                                        <div class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center">
+                                        <div class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
                                             <div class="me-auto ms-1 lesson-text">01</div>
                                             <div class="mx-auto lesson-text">Introduction to CSS</div>
                                             <img src="shared/assets/img/courses/check_circle.png" alt="arrow"
                                                 class="img-fluid ms-auto me-1 lesson-image" width="28px">
                                         </div>
-                                        <div class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center">
+                                        <div class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
                                             <div class="me-auto ms-1 lesson-text">02</div>
                                             <div class="mx-auto lesson-text">Ways to Apply CSS</div>
                                             <img src="shared/assets/img/courses/check_circle.png" alt="arrow"
                                                 class="img-fluid ms-auto me-1 lesson-image" width="28px">
                                         </div>
-                                        <div class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center">
+                                        <div class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
                                             <div class="me-auto ms-1 lesson-text">03</div>
                                             <div class="mx-auto lesson-text">CSS Syntax & Selectors</div>
                                             <img src="shared/assets/img/courses/check_circle.png" alt="arrow"
                                                 class="img-fluid ms-auto me-1 lesson-image" width="28px">
                                         </div>
-                                        <div class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center">
+                                        <a href="lesson.html" class="text-decoration-none"><div class="box lessons-container fw-bold mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
                                             <div class="me-auto ms-1 lesson-text">04</div>
                                             <div class="mx-auto lesson-text">Fonts and Formatting</div>
-                                            <img src="shared/assets/img/courses/check_circle.png" alt="arrow"
+                                            <img src="shared/assets/img/courses/keyboard_arrow_right.png" alt="arrow"
                                                 class="img-fluid ms-auto me-1 lesson-image" width="28px">
-                                        </div>
-                                        <div class="box fw-bold mb-2 p-1 p-sm-3 d-flex align-items-center">
+                                        </div></a>
+                                        <div class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center opacity-25">
                                             <div class="me-auto ms-1 lesson-text">05</div>
                                             <div class="mx-auto lesson-text">Colors and Backgrounds</div>
-                                            <img src="shared/assets/img/courses/keyboard_arrow_right.png" alt="arrow"
+                                            <img src="shared/assets/img/courses/locked.png" alt="arrow"
                                                 class="img-fluid ms-auto me-1 lesson-image" width="28px">
                                         </div>
                                         <div
@@ -473,82 +472,82 @@
 
             if (courseType == "html") {
                 courseContainer.innerHTML = `<div class="h5 mb-3 fw-bold">HTML Lessons</div>
-                                        <div class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center">
+                                        <div class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
                                             <div class="me-auto ms-1 lesson-text">01</div>
                                             <div class="mx-auto lesson-text">Introduction to HTML</div>
                                             <img src="shared/assets/img/courses/check_circle.png" alt="arrow"
                                                 class="img-fluid ms-auto me-1 lesson-image" width="28px">
                                         </div>
-                                        <div class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center">
+                                        <div class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
                                             <div class="me-auto ms-1 lesson-text">02</div>
                                             <div class="mx-auto lesson-text">Text Formatting and Headings</div>
                                             <img src="shared/assets/img/courses/check_circle.png" alt="arrow"
                                                 class="img-fluid ms-auto me-1 lesson-image" width="28px">
                                         </div>
-                                        <div class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center">
+                                        <div class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
                                             <div class="me-auto ms-1 lesson-text">03</div>
                                             <div class="mx-auto lesson-text">Adding Images to Your Website</div>
                                             <img src="shared/assets/img/courses/check_circle.png" alt="arrow"
                                                 class="img-fluid ms-auto me-1 lesson-image" width="28px">
                                         </div>
                                         <div
-                                            class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center">
+                                            class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
                                             <div class="me-auto ms-1 lesson-text">04</div>
                                             <div class="mx-auto lesson-text">Lists and Tables</div>
                                             <img src="shared/assets/img/courses/check_circle.png" alt="arrow"
                                                 class="img-fluid ms-auto me-1 lesson-image" width="28px">
                                         </div>
                                         <div
-                                            class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center">
+                                            class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
                                             <div class="me-auto ms-1 lesson-text">05</div>
                                             <div class="mx-auto lesson-text">Forms and Inputs</div>
                                             <img src="shared/assets/img/courses/check_circle.png" alt="arrow"
                                                 class="img-fluid ms-auto me-1 lesson-image" width="28px">
                                         </div>
                                         <div
-                                            class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center">
+                                            class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
                                             <div class="me-auto ms-1 lesson-text">06</div>
                                             <div class="mx-auto lesson-text">HTML Entities</div>
                                             <img src="shared/assets/img/courses/check_circle.png" alt="arrow"
                                                 class="img-fluid ms-auto me-1 lesson-image" width="28px">
                                         </div>
                                         <div
-                                            class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center">
+                                            class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
                                             <div class="me-auto ms-1 lesson-text">07</div>
                                             <div class="mx-auto lesson-text">Semantic HTML</div>
                                             <img src="shared/assets/img/courses/check_circle.png" alt="arrow"
                                                 class="img-fluid ms-auto me-1 lesson-image" width="28px">
                                         </div>
                                         <div
-                                            class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center">
+                                            class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
                                             <div class="me-auto ms-1 lesson-text">08</div>
                                             <div class="mx-auto lesson-text">Block vs Inline Elements</div>
                                             <img src="shared/assets/img/courses/check_circle.png" alt="arrow"
                                                 class="img-fluid ms-auto me-1 lesson-image" width="28px">
                                         </div>
                                         <div
-                                            class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center">
+                                            class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
                                             <div class="me-auto ms-1 lesson-text">09</div>
                                             <div class="mx-auto lesson-text">HTML Attributes</div>
                                             <img src="shared/assets/img/courses/check_circle.png" alt="arrow"
                                                 class="img-fluid ms-auto me-1 lesson-image" width="28px">
                                         </div>
                                         <div
-                                            class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center">
+                                            class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
                                             <div class="me-auto ms-1 lesson-text">10</div>
                                             <div class="mx-auto lesson-text">Iframe and Embedding</div>
                                             <img src="shared/assets/img/courses/check_circle.png" alt="arrow"
                                                 class="img-fluid ms-auto me-1 lesson-image" width="28px">
                                         </div>
                                         <div
-                                            class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center">
+                                            class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
                                             <div class="me-auto ms-1 lesson-text">11</div>
                                             <div class="mx-auto lesson-text">Iframe and Embedding</div>
                                             <img src="shared/assets/img/courses/check_circle.png" alt="arrow"
                                                 class="img-fluid ms-auto me-1 lesson-image" width="28px">
                                         </div>
                                         <div
-                                            class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center">
+                                            class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
                                             <div class="me-auto ms-1 lesson-text">12</div>
                                             <div class="mx-auto lesson-text">Form Validation</div>
                                             <img src="shared/assets/img/courses/check_circle.png" alt="arrow"
@@ -557,34 +556,34 @@
                     ;
             } else if (courseType == "css") {
                 courseContainer.innerHTML = `<div class="h5 mb-3 fw-bold">CSS Lessons</div>
-                                        <div class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center">
+                                        <div class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
                                             <div class="me-auto ms-1 lesson-text">01</div>
                                             <div class="mx-auto lesson-text">Introduction to CSS</div>
                                             <img src="shared/assets/img/courses/check_circle.png" alt="arrow"
                                                 class="img-fluid ms-auto me-1 lesson-image" width="28px">
                                         </div>
-                                        <div class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center">
+                                        <div class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
                                             <div class="me-auto ms-1 lesson-text">02</div>
                                             <div class="mx-auto lesson-text">Ways to Apply CSS</div>
                                             <img src="shared/assets/img/courses/check_circle.png" alt="arrow"
                                                 class="img-fluid ms-auto me-1 lesson-image" width="28px">
                                         </div>
-                                        <div class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center">
+                                        <div class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
                                             <div class="me-auto ms-1 lesson-text">03</div>
                                             <div class="mx-auto lesson-text">CSS Syntax & Selectors</div>
                                             <img src="shared/assets/img/courses/check_circle.png" alt="arrow"
                                                 class="img-fluid ms-auto me-1 lesson-image" width="28px">
                                         </div>
-                                        <div class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center">
+                                        <a href="lesson.html" class="text-decoration-none"><div class="box lessons-container fw-bold mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
                                             <div class="me-auto ms-1 lesson-text">04</div>
                                             <div class="mx-auto lesson-text">Fonts and Formatting</div>
-                                            <img src="shared/assets/img/courses/check_circle.png" alt="arrow"
+                                            <img src="shared/assets/img/courses/keyboard_arrow_right.png" alt="arrow"
                                                 class="img-fluid ms-auto me-1 lesson-image" width="28px">
-                                        </div>
-                                        <div class="box fw-bold mb-2 p-1 p-sm-3 d-flex align-items-center">
+                                        </div></a>
+                                        <div class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center opacity-25">
                                             <div class="me-auto ms-1 lesson-text">05</div>
                                             <div class="mx-auto lesson-text">Colors and Backgrounds</div>
-                                            <img src="shared/assets/img/courses/keyboard_arrow_right.png" alt="arrow"
+                                            <img src="shared/assets/img/courses/locked.png" alt="arrow"
                                                 class="img-fluid ms-auto me-1 lesson-image" width="28px">
                                         </div>
                                         <div
