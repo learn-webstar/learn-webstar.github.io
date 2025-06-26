@@ -2,6 +2,12 @@ body {
     font-family: var(--Regular);
 }
 
+.highlight:hover {
+    transition: ease-in .1s;
+    background-color: var(--black);
+    color: white;
+}
+
 /*Containers*/
 .box,
 .course {
@@ -12,7 +18,7 @@ body {
 
 .box-locked {
     background-color: var(--white);
-    color: var(--blue);
+    color: var(--black);
     border-radius: 20px;
     border-style: solid;
     border-width: 1px;
@@ -85,6 +91,7 @@ body {
 
 .progress {
     background-color: var(--highlight);
+    width: 37.5%;
 }
 
 /*Images*/
@@ -111,8 +118,9 @@ body {
 
 /*Buttons*/
 .continue-btn {
-    background-color: var(--white);
+    background-color: var(--black);
     border-radius: 20px;
+    color: white !important;
 }
 
 .cursor-point:hover {
@@ -318,10 +326,6 @@ body {
         background-color: transparent;
         height: 6px;
         border-radius: 20px;
-    }
-
-    .progress {
-        background-color: var(--white);
     }
 
     .lesson-text {
