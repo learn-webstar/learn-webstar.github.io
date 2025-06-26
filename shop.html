@@ -316,11 +316,7 @@
     <script>
         const cardGrid = document.getElementById('cardGrid');
 
-        const fontNames = [
-            "Helvetica", "Arial", "Montserrat", "Roboto",
-            "Serif", "Gotham", "Poppins Bold", "Courier New"
-        ];
-
+        const fontNames = ["Helvetica", "Arial", "Montserrat", "Roboto", "Serif", "Gotham", "Poppins Bold", "Courier New"];
         const fontMap = {
             "Helvetica": "Helvetica, sans-serif",
             "Arial": "Arial, sans-serif",
@@ -331,16 +327,25 @@
             "Poppins Bold": "'Poppins', sans-serif",
             "Courier New": "'Courier New', monospace"
         };
+        const colorNames = ["Rose Red", "Orange", "Green", "Gray", "Brown", "Cyan", "Amber", "Purple"];
+        const badgeNames = ["Code Cadet", "HTML Hero", "CSS Styler", "Webstar Scholar", "Syntax Star", "Frontend Explorer", "Tag Master", "Pixel Pro"];
 
-        const colorNames = [
-            "Rose Red", "Orange", "Green", "Gray",
-            "Brown", "Cyan", "Amber", "Purple"
-        ];
+        // In-memory store (resets on page reload)
+        const boughtItems = [];
 
-        const badgeNames = [
-            "Code Cadet", "HTML Hero", "CSS Styler", "Webstar Scholar",
-            "Syntax Star", "Frontend Explorer", "Tag Master", "Pixel Pro"
-        ];
+        function saveBoughtItem(itemKey) {
+            if (!boughtItems.includes(itemKey)) {
+                boughtItems.push(itemKey);
+            }
+        }
+
+        function isBought(itemKey) {
+            return boughtItems.includes(itemKey);
+        }
+
+        function getBoughtItems() {
+            return boughtItems;
+        }
 
         function getCardTitle(label, i) {
             if (label === 'Fonts') return fontNames[i - 1];
@@ -352,92 +357,121 @@
         function generateCards(label) {
             cardGrid.innerHTML = '';
 
+            const bought = getBoughtItems();
+
             if (label.toLowerCase() === 'my items') {
-                const msg = document.createElement('div');
-                msg.className = 'w-100 text-center py-5 text-muted';
-                msg.style.minHeight = '200px'; // Prevents shrinking
-                msg.textContent = 'You have no items yet.';
-                cardGrid.appendChild(msg);
+                if (bought.length === 0) {
+                    const msg = document.createElement('div');
+                    msg.className = 'w-100 text-center py-5 text-muted';
+                    msg.style.minHeight = '200px';
+                    msg.textContent = 'You have no items yet.';
+                    cardGrid.appendChild(msg);
+                    return;
+                }
+
+                bought.forEach(itemKey => {
+                    const [type, index] = itemKey.split('-');
+                    renderCard(type, parseInt(index), true);
+                });
                 return;
             }
 
-
             for (let i = 1; i <= 8; i++) {
-                const col = document.createElement('div');
-                col.className = 'col-md-3';
-
-                const card = document.createElement('div');
-                card.className = 'cardItem h-100 p-3 text-center rounded-4';
-
-                const img = document.createElement('img');
-                img.src = `shared/assets/img/shop/${label.toLowerCase().replace(/\s/g, '-')}-${i}.png`;
-                img.alt = `${label} ${i}`;
-                img.className = 'shopCardImage mb-1 rounded-4';
-                img.style.maxHeight = '125px';
-
-                const imgWrapper = document.createElement('div');
-                imgWrapper.className = 'overflow-hidden rounded-4 mb-2';
-                imgWrapper.appendChild(img);
-                card.appendChild(imgWrapper);
-
-                const title = document.createElement('div');
-                const name = getCardTitle(label, i);
-                title.textContent = name;
-                title.className = 'fw-bold mb-1 title';
-
-                if (label === 'Fonts') {
-                    title.style.fontFamily = fontMap[name] || 'sans-serif';
-                }
-
-                const priceRow = document.createElement('div');
-                priceRow.className = 'd-flex justify-content-center align-items-center gap-1';
-
-                const coinIcon = document.createElement('img');
-                coinIcon.src = 'shared/assets/img/coin.svg';
-                coinIcon.alt = 'Coin';
-                coinIcon.style.width = '20px';
-
-                const price = document.createElement('span');
-                price.textContent = '250';
-                price.className = 'title';
-
-                priceRow.append(coinIcon, price);
-
-                card.append(title, priceRow);
-                col.appendChild(card);
-                cardGrid.appendChild(col);
-
-                card.addEventListener('click', () => {
-                    document.getElementById('modalTitle').textContent = name;
-                    document.getElementById('modalPrice').textContent = price.textContent;
-
-                    const modalImg = document.querySelector('.modal-img');
-                    modalImg.innerHTML = '';
-                    const modalImage = document.createElement('img');
-                    modalImage.src = img.src;
-                    modalImage.alt = img.alt;
-                    modalImage.className = 'img-fluid rounded-4';
-                    modalImage.style.maxHeight = '200px';
-                    modalImg.appendChild(modalImage);
-
-                    new bootstrap.Modal(document.getElementById('cardModal')).show();
-                });
+                const itemKey = `${label}-${i}`;
+                renderCard(label, i, isBought(itemKey));
             }
         }
 
+        function renderCard(label, i, bought = false) {
+            const col = document.createElement('div');
+            col.className = 'col-md-3';
+
+            const card = document.createElement('div');
+            card.className = 'cardItem h-100 p-3 text-center rounded-4' + (bought ? ' opacity-50' : '');
+
+            const img = document.createElement('img');
+            img.src = `shared/assets/img/shop/${label.toLowerCase().replace(/\s/g, '-')}-${i}.png`;
+            img.alt = `${label} ${i}`;
+            img.className = 'shopCardImage mb-1 rounded-4';
+            img.style.maxHeight = '125px';
+
+            const imgWrapper = document.createElement('div');
+            imgWrapper.className = 'overflow-hidden rounded-4 mb-2';
+            imgWrapper.appendChild(img);
+            card.appendChild(imgWrapper);
+
+            const title = document.createElement('div');
+            const name = getCardTitle(label, i);
+            title.textContent = name;
+            title.className = 'fw-bold mb-1 title';
+
+            if (label === 'Fonts') {
+                title.style.fontFamily = fontMap[name] || 'sans-serif';
+            }
+
+            const priceRow = document.createElement('div');
+            priceRow.className = 'd-flex justify-content-center align-items-center gap-1';
+
+            const coinIcon = document.createElement('img');
+            coinIcon.src = 'shared/assets/img/coin.svg';
+            coinIcon.alt = 'Coin';
+            coinIcon.style.width = '20px';
+
+            const price = document.createElement('span');
+            price.textContent = '250';
+            price.className = 'title';
+
+            priceRow.append(coinIcon, price);
+
+            card.append(title, priceRow);
+            col.appendChild(card);
+            cardGrid.appendChild(col);
+
+            card.addEventListener('click', () => {
+                document.getElementById('modalTitle').textContent = name;
+                document.getElementById('modalPrice').textContent = price.textContent;
+
+                const modalImg = document.querySelector('.modal-img');
+                modalImg.innerHTML = '';
+                const modalImage = document.createElement('img');
+                modalImage.src = img.src;
+                modalImage.alt = img.alt;
+                modalImage.className = 'img-fluid rounded-4';
+                modalImage.style.maxHeight = '200px';
+                modalImg.appendChild(modalImage);
+
+                const buyButton = document.querySelector('.modalButton');
+                buyButton.disabled = bought;
+                buyButton.textContent = bought ? 'Purchased' : 'BUY';
+                buyButton.onclick = () => {
+                    const itemKey = `${label}-${i}`;
+                    saveBoughtItem(itemKey);
+                    generateCards(label);
+                    const modalInstance = bootstrap.Modal.getInstance(document.getElementById('cardModal'));
+                    if (modalInstance) modalInstance.hide();
+                };
+
+                new bootstrap.Modal(document.getElementById('cardModal')).show();
+            });
+        }
+
+        function setActiveButton(label) {
+            document.querySelectorAll('.plainButton').forEach(btn => {
+                const btnLabel = btn.getAttribute('data-label') || btn.textContent.trim();
+                btn.classList.toggle('active', btnLabel === label);
+            });
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
-            // Modal accessibility
             const modal = document.getElementById('cardModal');
             modal?.addEventListener('hidden.bs.modal', () => document.body.focus());
             document.querySelector('#cardModal .custom-close')?.addEventListener('click', function () {
                 this.blur();
             });
 
-            // Initial load
             generateCards('Frame');
             setActiveButton('Frame');
 
-            // Desktop buttons
             document.querySelectorAll('.plainButton').forEach(btn => {
                 btn.addEventListener('click', function () {
                     const label = this.getAttribute('data-label') || this.textContent.trim();
@@ -446,7 +480,6 @@
                 });
             });
 
-            // Mobile dropdown
             const dropdownButton = document.getElementById('shopDropdownButton');
             document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(item => {
                 item.addEventListener('click', function () {
@@ -456,26 +489,8 @@
                     setActiveButton(value);
 
                     document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(i => i.classList.remove('selected'));
-
                     this.classList.add('selected');
                 });
-            });;
-
-        });
-
-        function setActiveButton(label) {
-            document.querySelectorAll('.plainButton').forEach(btn => {
-                const btnLabel = btn.getAttribute('data-label') || btn.textContent.trim();
-                btn.classList.toggle('active', btnLabel === label);
-            });
-        }
-
-        const buttons = document.querySelectorAll('.plainButton');
-
-        buttons.forEach(button => {
-            button.addEventListener('click', () => {
-                buttons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
             });
         });
 
@@ -500,17 +515,14 @@
                 if (page === activePage) {
                     item.classList.add("selected-box");
                     link.classList.add("selected");
-                    const src = img.getAttribute("src").replace(".png", ".png");
-                    img.setAttribute("src", src);
                 } else {
                     item.classList.remove("selected-box");
                     link.classList.remove("selected");
-                    const src = img.getAttribute("src").replace(".png", ".png");
-                    img.setAttribute("src", src);
                 }
             });
         });
     </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
