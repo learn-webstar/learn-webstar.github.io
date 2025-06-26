@@ -44,7 +44,7 @@
         }
 
         .btn-login:hover {
-            background-color: var(--highlight) !important;
+            background-color: var(--black) !important;
             color: var(--white) !important;
         }
 
