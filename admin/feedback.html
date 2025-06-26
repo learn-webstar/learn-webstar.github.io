@@ -55,38 +55,6 @@
                                 <a class="nav-link text-dark p-0" href="userslist.html">Users List</a>
                             </li>
                         </ul>
-
-                        <!-- Profile -->
-                        <hr>
-                        <div class="dropdown mt-auto p-2" style="letter-spacing: -1px;">
-                            <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle text-dark"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="https://avatars.githubusercontent.com/u/181800261?s=96&v=4" alt="" width="32"
-                                    height="32" class="rounded-circle me-2">
-                                <strong class="text-dark" style="font-family: var(--Bold);">james</strong>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end text-small shadow">
-                                <li class="ms-3 my-1" style="font-family: var(--Bold);"><i
-                                        class="fa-solid fa-gear me-2"></i>Settings</li>
-                                <li><a class="dropdown-item" style="font-family: var(--Regular);" href="#">Terms &
-                                        Conditions</a></li>
-                                <li><a class="dropdown-item" style="font-family: var(--Regular);" href="#">Change
-                                        Password</a></li>
-                                <li><a class="dropdown-item" style="font-family: var(--Regular);"
-                                        href="faqs.html">FAQs</a></li>
-                                <li><a class="dropdown-item" style="font-family: var(--Regular);"
-                                        href="feedback.html">Send
-                                        Feedback</a></li>
-                                <hr class="dropdown-divider">
-                                <li><a class="dropdown-item" style="font-family: var(--Bold);" href="profile.html"><i
-                                            class="fa-solid fa-user me-2"></i>My Profile</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" style="font-family: var(--Bold);" href="login.html"><i
-                                            class="fa-solid fa-right-from-bracket me-2"></i>Sign out</a></li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -134,41 +102,6 @@
                                     <a class="nav-link text-dark p-0" href="userslist.html">UsersList</a>
                                 </li>
                             </ul>
-
-
-
-                            <div class="dropdown mt-auto p-4" style="letter-spacing: -1px;">
-                                <a href="#"
-                                    class="d-flex align-items-center text-decoration-none dropdown-toggle text-dark"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="https://avatars.githubusercontent.com/u/181800261?s=96&v=4" alt=""
-                                        width="32" height="32" class="rounded-circle me-2">
-                                    <strong class="text-dark" style="font-family: var(--Bold);">james</strong>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-end text-small shadow">
-                                    <li class="ms-3 my-1" style="font-family: var(--Bold);"><i
-                                            class="fa-solid fa-gear me-2"></i>Settings</li>
-                                    <li><a class="dropdown-item" style="font-family: var(--Regular);" href="#">Terms &
-                                            Conditions</a></li>
-                                    <li><a class="dropdown-item" style="font-family: var(--Regular);" href="#">Change
-                                            Password</a></li>
-                                    <li><a class="dropdown-item" style="font-family: var(--Regular);"
-                                            href="faqs.html">FAQs</a>
-                                    </li>
-                                    <li><a class="dropdown-item" style="font-family: var(--Regular);"
-                                            href="feedback.html">Send
-                                            Feedback</a></li>
-                                    <hr class="dropdown-divider">
-                                    <li><a class="dropdown-item" style="font-family: var(--Bold);"
-                                            href="profile.html"><i class="fa-solid fa-user me-2"></i>My Profile</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" style="font-family: var(--Bold);" href="login.html"><i
-                                                class="fa-solid fa-right-from-bracket me-2"></i>Sign out</a></li>
-                                </ul>
-                            </div>
-
                         </div>
                     </div>
                 </div>
@@ -199,43 +132,131 @@
                     </nav>
 
                     <!-- PUT CONTENT HERE -->
+                    <div class="container-fluid py-3 overflow-y-auto">
+                        <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                            <div class="m-0" style="font-size: 2rem; font-weight:bold;">Feedback</div>
+                            <form class="d-flex justify-content-end" role="search">
+                                <input class="form-control rounded-pill px-3" type="search"
+                                    placeholder="Search users..." aria-label="Search"
+                                    style="min-width: 230px; max-width: 300px; border: 1px solid var(--primaryColor);">
+                            </form>
+                        </div>
+                        <div class="d-flex justify-content-end mb-2">
+                            <div style="width: 100px;">
+                                <select id="readFilter" class="form-select form-select-sm"
+                                    style="width: 100px; border: 2px solid var(--primaryColor); border-radius: 10px;">
+                                    <option value="all">All</option>
+                                    <option value="read">Read</option>
+                                    <option value="unread">Unread</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Table -->
+                        <div class="table-responsive">
+                            <table class="table align-middle text-nowrap">
+                                <thead class="custom-thead">
+                                    <tr>
+                                        <th>Users</th>
+                                        <th>Content</th>
+                                        <th>Date</th>
+                                        <th>Email</th>
+                                        <th>Read</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Ana Cruz</td>
+                                        <td>Requested password reset assistance.</td>
+                                        <td>2025-06-24</td>
+                                        <td>ana.cruz@example.com</td>
+                                        <td><input type="checkbox" checked></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mark Villanueva</td>
+                                        <td>Reported issue with course enrollment.</td>
+                                        <td>2025-06-22</td>
+                                        <td>mark.v@example.com</td>
+                                        <td><input type="checkbox"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Liza Tan</td>
+                                        <td>Submitted feedback on UI design.</td>
+                                        <td>2025-06-21</td>
+                                        <td>lizatan23@example.com</td>
+                                        <td><input type="checkbox" checked></td>
+                                    </tr>
+                                    <tr>
+                                        <td>James Ortega</td>
+                                        <td>Inquired about certificate download issue.</td>
+                                        <td>2025-06-20</td>
+                                        <td>jortega2020@example.com</td>
+                                        <td><input type="checkbox"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const currentPath = window.location.pathname.split("/").pop();
-                const pageMap = {
-                    "index.html": "home",
-                    "course.html": "course",
-                    "explore.html": "explore",
-                    "userslist.html": "userslist"
-                };
 
-                const activePage = pageMap[currentPath];
-                const navItems = document.querySelectorAll('[data-page]');
+    <script>
 
-                navItems.forEach(item => {
-                    const page = item.getAttribute('data-page');
-                    const link = item.querySelector('a');
-                    const img = item.querySelector('img');
+        document.getElementById("readFilter").addEventListener("change", function () {
+            const filterValue = this.value;
+            const rows = document.querySelectorAll("tbody tr");
 
-                    if (page === activePage) {
-                        item.classList.add("selected-box");
-                        link.classList.add("selected");
-                        const src = img.getAttribute("src").replace("-w.png", ".png");
-                        img.setAttribute("src", src);
-                    } else {
-                        item.classList.remove("selected-box");
-                        link.classList.remove("selected");
-                        const src = img.getAttribute("src").replace(".png", "-w.png");
-                        img.setAttribute("src", src);
-                    }
-                });
+            rows.forEach(row => {
+                const checkbox = row.querySelector("td:last-child input[type='checkbox']");
+                if (!checkbox) return;
+
+                if (filterValue === "all") {
+                    row.style.display = "";
+                } else if (filterValue === "read" && checkbox.checked) {
+                    row.style.display = "";
+                } else if (filterValue === "unread" && !checkbox.checked) {
+                    row.style.display = "";
+                } else {
+                    row.style.display = "none";
+                }
             });
-        </script>
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const currentPath = window.location.pathname.split("/").pop();
+            const pageMap = {
+                "index.html": "home",
+                "course.html": "course",
+                "explore.html": "explore",
+                "userslist.html": "userslist"
+            };
+
+            const activePage = pageMap[currentPath];
+            const navItems = document.querySelectorAll('[data-page]');
+
+            navItems.forEach(item => {
+                const page = item.getAttribute('data-page');
+                const link = item.querySelector('a');
+                const img = item.querySelector('img');
+
+                if (page === activePage) {
+                    item.classList.add("selected-box");
+                    link.classList.add("selected");
+                    const src = img.getAttribute("src").replace("-w.png", ".png");
+                    img.setAttribute("src", src);
+                } else {
+                    item.classList.remove("selected-box");
+                    link.classList.remove("selected");
+                    const src = img.getAttribute("src").replace(".png", "-w.png");
+                    img.setAttribute("src", src);
+                }
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 
 
 </body>
