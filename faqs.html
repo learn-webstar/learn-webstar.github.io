@@ -17,10 +17,10 @@
 </head>
 
 <body>
-    <div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center p-3">
+    <div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center p-0 p-md-3" style="background-color: var(--black);">
         <div class="row w-100">
 
-            <!-- Sidebar (only shows on mobile) -->
+             <!-- Sidebar (only shows on mobile) -->
             <div class="offcanvas offcanvas-start d-md-none" tabindex="-1" id="sidebarOffcanvas"
                 aria-labelledby="sidebarOffcanvasLabel" style="background-color: #fff; width: 250px;">
                 <div class="offcanvas-header">
@@ -35,23 +35,24 @@
 
                         <hr>
                         <ul class="nav nav-pills flex-column mb-auto">
-                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2 rounded-3 selected-box">
-                                <img src="shared/assets/img/dashboard-w.png" style="width: 30px; height: 30px;">
-                                <a class="nav-link selected p-0" href="index.html">Home</a>
+                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2 rounded-3" data-page="home">
+                                <img src="shared/assets/img/dashboard.png" style="width: 30px; height: 30px;">
+                                <a class="nav-link text-dark p-0" href="index.html">Home</a>
                             </li>
-                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2">
+                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2 rounded-3" data-page="course">
                                 <img src="shared/assets/img/courses.png" style="width: 30px; height: 30px;">
                                 <a class="nav-link text-dark p-0" href="course.html">Courses</a>
                             </li>
-                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2">
+                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2 rounded-3" data-page="explore">
                                 <img src="shared/assets/img/explore.png" style="width: 30px; height: 30px;">
                                 <a class="nav-link text-dark p-0" href="explore.html">Explore</a>
                             </li>
-                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2">
+                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2 rounded-3" data-page="shop">
                                 <img src="shared/assets/img/shop.png" style="width: 30px; height: 30px;">
                                 <a class="nav-link text-dark p-0" href="shop.html">Shop</a>
                             </li>
-                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2">
+                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2 rounded-3"
+                                data-page="minigames">
                                 <img src="shared/assets/img/games.png" style="width: 30px; height: 30px;">
                                 <a class="nav-link text-dark p-0" href="miniGames.html">Mini-games</a>
                             </li>
@@ -185,7 +186,7 @@
 
             <!-- Main Container Column-->
             <div class="col main-container m-0 p-0 mx-0 mx-md-2 p-0 p-md-4 overflow-y-auto">
-                <div class="card border-0 px-3 pt-3 m-0 h-100 w-100 rounded-0 shadow-none">
+                <div class="card border-0 px-3 pt-3 m-0 h-100 w-100 rounded-0 shadow-none" style="background-color: var(--white);">
 
                     <!-- Navbar for mobile -->
                     <nav class="navbar navbar-light px-3 d-md-none">
