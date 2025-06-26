@@ -102,7 +102,7 @@
     display: none !important;
 }
 
-.btn{
+.btn-exit{
     border: 1px solid var(--black);
     background-color: var(--primaryColor);
     border-radius: 20px;
@@ -110,7 +110,7 @@
     color: var(--black);
 }
 
-.btn:hover {
+.btn-exit:hover {
     background-color: var(--highlight);
     border: 1px solid var(--black);
     color: var(--white);
