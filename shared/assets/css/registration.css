@@ -23,6 +23,26 @@ body {
     max-width: 75%;
 }
 
+.password-toggle-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #6c757d;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.password-toggle-btn:hover {
+    color: #2866e4;
+}
+
+.password-field-container .form-control {
+    padding-right: 40px;
+}
+
 @media (max-width: 767.98px) {
     .container-fluid > .row {
         background: #2866e4;
