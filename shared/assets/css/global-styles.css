@@ -1,13 +1,13 @@
 @font-face {
     font-family: 'DM Sans Medium';
-    src: url('../font/DMSans_18pt-Medium.ttf') format('truetype');
+    src: url('../font/Poppins-Medium.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'DM Sans Black';
-    src: url('../font/Poppins-SemiBold.ttf') format('truetype');
+    src: url('../font/Poppins-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -21,14 +21,14 @@
 
 @font-face {
     font-family: 'DM Sans SemiBold';
-    src: url('../font/DMSans_18pt-SemiBold.ttf') format('truetype');
+    src: url('../font/Poppins-SemiBold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'DM Sans Bold';
-    src: url('../font/Poppins-SemiBold.ttf') format('truetype');
+    src: url('../font/Poppins-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
