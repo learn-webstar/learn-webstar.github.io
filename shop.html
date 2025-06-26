@@ -229,6 +229,8 @@
                                         <button type="button" class="plainButton" data-label="Fonts">Fonts</button>
                                         <button type="button" class="plainButton" data-label="Logo Badge">Logo
                                             Badge</button>
+                                        <button type="button" class="plainButton" data-label="My items">My
+                                            Items</button>
                                     </div>
                                 </div>
                             </div>
@@ -236,7 +238,7 @@
                             <!-- Dropdown (mobile only) -->
                             <div class="col-12 mt-2 d-flex justify-content-center d-md-none mt-3">
                                 <div class="dropdown fixed-dropdown px-3">
-                                    <button class="btn btn-outline-primary dropdown-toggle w-100" type="button"
+                                    <button class="btn custom-dropdown-button dropdown-toggle w-100" type="button"
                                         id="shopDropdownButton" data-bs-toggle="dropdown" aria-expanded="false">
                                         Frame
                                     </button>
@@ -249,6 +251,8 @@
                                                 data-value="Fonts">Fonts</button></li>
                                         <li><button class="dropdown-item" type="button" data-value="Logo Badge">Logo
                                                 Badge</button></li>
+                                        <li><button class="dropdown-item" type="button" data-value="My items">My
+                                                Items</button></li>
                                     </ul>
                                 </div>
                             </div>
@@ -281,7 +285,7 @@
                     <div class="container mb-2 px-5">
                         <div class="d-flex flex-column flex-md-row align-items-center gap-4">
                             <!-- Left Box (Image inside a card) -->
-                            <div class="cardModal shadow-sm rounded-4" style="max-width: 200px;">
+                            <div class="cardModal shadow-sm rounded-4">
                                 <div class="modal-img p-3 text-center">
                                     <!-- Image will be injected here by JavaScript -->
                                 </div>
@@ -347,6 +351,16 @@
 
         function generateCards(label) {
             cardGrid.innerHTML = '';
+
+            if (label.toLowerCase() === 'my items') {
+                const msg = document.createElement('div');
+                msg.className = 'w-100 text-center py-5 text-muted';
+                msg.style.minHeight = '200px'; // Prevents shrinking
+                msg.textContent = 'You have no items yet.';
+                cardGrid.appendChild(msg);
+                return;
+            }
+
 
             for (let i = 1; i <= 8; i++) {
                 const col = document.createElement('div');
@@ -440,8 +454,12 @@
                     dropdownButton.textContent = value;
                     generateCards(value);
                     setActiveButton(value);
+
+                    document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(i => i.classList.remove('selected'));
+
+                    this.classList.add('selected');
                 });
-            });
+            });;
 
         });
 
@@ -456,8 +474,8 @@
 
         buttons.forEach(button => {
             button.addEventListener('click', () => {
-                buttons.forEach(btn => btn.classList.remove('active')); // Remove from all
-                button.classList.add('active'); // Add to clicked
+                buttons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
             });
         });
 
