@@ -86,16 +86,31 @@
     font-family: var(--Bold);
 }
 
+#countdownOverlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#countdownOverlay.hidden {
+    display: none !important;
+}
+
 @media (max-width: 767.98px) {
     .statusBar {
         font-size: .90em;
         justify-content: start;
     }
-    .cardGame {
-    padding: 1rem !important;
-  }
 
-  .btn {
+    .cardGame {
+        padding: 1rem !important;
+    }
+
+    .btn {
         padding: 0.25rem 2rem !important;
     }
 }
