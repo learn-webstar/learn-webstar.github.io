@@ -201,14 +201,33 @@
             <div class="col">
               <!-- Main panel -->
               <div class="main px-4 py-4">
-                <p class="fs-5">CSS Course Lesson 3</p>
+                <!-- Title Row -->
+                <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap">
+                  <p class="fs-5 m-0">CSS Course Lesson 3</p>
+
+                  <!-- Show this button only on medium and up -->
+                  <div class="d-none d-md-block">
+                    <button class="btn btn-delete">
+                      <i class="fa-solid fa-download me-2"></i> Download
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Fonts and Formatting Heading -->
                 <h1 class="fw-bold mb-3">Fonts and Formatting</h1>
+
+                <!-- Show this button only on small screens (below md) -->
+                <div class="d-block d-md-none mb-3">
+                  <button class="btn btn-delete btn-sm">
+                    <i class="fa-solid fa-download me-2"></i> Download
+                  </button>
+                </div>
                 <p>Fonts are the different styles or designs of text that appear on a webpage. Just like handwriting
                   styles, fonts change the way letters and words look. Fonts can feel professional, fun, serious, or
                   creative—depending on their design.</p>
 
                 <!-- Hoverrable button -->
-                <p class="mt-3">Hover to reveal these fonts!</p>
+                <p class="mt-3">Click to reveal these fonts!</p>
                 <div class="d-flex flex-wrap gap-3 my-3 font-buttons">
                   <button class="btn font-btn" data-font="Helvetica">Helvetica</button>
                   <button class="btn font-btn" data-font="'Comic Neue', cursive">Comic Neue</button>
@@ -220,9 +239,10 @@
                 </p>
 
                 <!-- Realtime code -->
-                <div class="mt-5 d-flex align-items-center gap-2">
-                  <img src="shared/assets/img/library_books.png" alt="Book Icon" style="width: 40px; height: 40px;">
-                  <div class="bold fs-5 m-0">Interactive Activity: Try Your Own Fonts!</div>
+                <div class="title mt-5 mb-4">
+                  <img src="shared/assets/img/library_books.png" alt="Book Icon"
+                    style="width: 40px; height: 40px; vertical-align: middle; margin-right: 8px;">
+                  Interactive Activity: Try Your Own Fonts!
                 </div>
 
                 <div class="flex-grow-1">
@@ -245,88 +265,89 @@
                 <div class="mt-5">
                   <p class="fs-5">
                     <img src="shared/assets/img/lightbulb.png" alt="Observe Icon" style="width: 32px; height: 40px;">
-                    <span class="bold">Observe</span>
+                    <span class="title bold">Observe</span>
                   </p>
                   <p>
                     Does the text look different? Try a few different fonts and see how each one changes the style or
                     feel
                     of the text.</p>
                 </div>
-              </div>
-
-              <!-- Mini game drag and drop-->
-              <div class="mt-5 px-4">
-                <div class="title">
-                  <img src="shared/assets/img/puzzle.png" alt="Mini Game Icon"
-                    style="width: 40px; height: 40px; vertical-align: middle; margin-right: 8px;">
-                  Mini Game: Match the Font Style!
-                </div>
-                <div class="descriptiongame">
-                  <p>In this game, your goal is to match text with its correct font style. This will help you become
-                    familiar with the different ways text can be styled in web design. Just drag and drop to arrange the
-                    code blocks on the right to match the output on the left!</p>
-                </div>
-                <div class="container" id="codePairs">
-                  <div class="row mb-3 mt-4 justify-content-center">
-                    <div class="col-12 col-md-3 pb-2 pb-md-0">
-                      <div class="game-output-text" style="font-weight: bold;">Hello, World!</div>
+                <!-- Mini game drag and drop-->
+                <div class="mt-5">
+                  <div class="title mb-4">
+                    <img src="shared/assets/img/puzzle.png" alt="Mini Game Icon"
+                      style="width: 40px; height: 40px; vertical-align: middle; margin-right: 8px;">
+                    Mini Game: Match the Font Style!
+                  </div>
+                  <div class="descriptiongame">
+                    <p>In this game, your goal is to match text with its correct font style. This will help you become
+                      familiar with the different ways text can be styled in web design. Just drag and drop to arrange
+                      the
+                      code blocks on the right to match the output on the left!</p>
+                  </div>
+                  <div class="container" id="codePairs">
+                    <div class="row mb-3 mt-4 justify-content-center">
+                      <div class="col-12 col-md-3 pb-2 pb-md-0">
+                        <div class="game-output-text" style="font-weight: bold;">Hello, World!</div>
+                      </div>
+                      <div class="col-12 col-md-7">
+                        <div class="game-code-block" draggable="true">
+                          &lt;p style="font-style: italic;"&gt;Hello, World!&lt;/p&gt;
+                        </div>
+                      </div>
                     </div>
-                    <div class="col-12 col-md-7">
-                      <div class="game-code-block" draggable="true">
-                        &lt;p style="font-style: italic;"&gt;Hello, World!&lt;/p&gt;
+
+                    <div class="row mb-3 justify-content-center">
+                      <div class="col-12 col-md-3 pb-2 pb-md-0">
+                        <div class="game-output-text" style="font-weight: 100; font-style: italic;">Hello, World!</div>
+                      </div>
+                      <div class="col-12 col-md-7">
+                        <div class="game-code-block" draggable="true">
+                          &lt;p&gt;Hello, World!&lt;/p&gt;
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mb-3 justify-content-center">
+                      <div class="col-12 col-md-3 pb-2 pb-md-0">
+                        <div class="game-output-text" style="font-weight: 100;">Hello, World!</div>
+                      </div>
+                      <div class="col-12 col-md-7">
+                        <div class="game-code-block" draggable="true">
+                          &lt;p style="font-weight: bold;"&gt;Hello, World!&lt;/p&gt;
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mb-3 justify-content-center">
+                      <div class="col-12 col-md-3 pb-2 pb-md-0">
+                        <div class="game-output-text" style="font-weight: 100; text-decoration: line-through;">Hello,
+                          World!</div>
+                      </div>
+                      <div class="col-12 col-md-7">
+                        <div class="game-code-block" draggable="true">
+                          &lt;p style="text-decoration: underline;"&gt;Hello, World!&lt;/p&gt;
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mb-3 justify-content-center">
+                      <div class="col-12 col-md-3 pb-2 pb-md-0">
+                        <div class="game-output-text" style="font-weight: 100; text-decoration: underline;">Hello,
+                          World!
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-7">
+                        <div class="game-code-block" draggable="true">
+                          &lt;p style="text-decoration: line-through;"&gt;Hello, World!&lt;/p&gt;
+                        </div>
                       </div>
                     </div>
                   </div>
 
-                  <div class="row mb-3 justify-content-center">
-                    <div class="col-12 col-md-3 pb-2 pb-md-0">
-                      <div class="game-output-text" style="font-weight: 100; font-style: italic;">Hello, World!</div>
-                    </div>
-                    <div class="col-12 col-md-7">
-                      <div class="game-code-block" draggable="true">
-                        &lt;p&gt;Hello, World!&lt;/p&gt;
-                      </div>
-                    </div>
+                  <div class="submit-container">
+                    <button class="submit-btn" onclick="checkAnswers()">Submit</button>
                   </div>
-
-                  <div class="row mb-3 justify-content-center">
-                    <div class="col-12 col-md-3 pb-2 pb-md-0">
-                      <div class="game-output-text" style="font-weight: 100;">Hello, World!</div>
-                    </div>
-                    <div class="col-12 col-md-7">
-                      <div class="game-code-block" draggable="true">
-                        &lt;p style="font-weight: bold;"&gt;Hello, World!&lt;/p&gt;
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="row mb-3 justify-content-center">
-                    <div class="col-12 col-md-3 pb-2 pb-md-0">
-                      <div class="game-output-text" style="font-weight: 100; text-decoration: line-through;">Hello,
-                        World!</div>
-                    </div>
-                    <div class="col-12 col-md-7">
-                      <div class="game-code-block" draggable="true">
-                        &lt;p style="text-decoration: underline;"&gt;Hello, World!&lt;/p&gt;
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="row mb-3 justify-content-center">
-                    <div class="col-12 col-md-3 pb-2 pb-md-0">
-                      <div class="game-output-text" style="font-weight: 100; text-decoration: underline;">Hello, World!
-                      </div>
-                    </div>
-                    <div class="col-12 col-md-7">
-                      <div class="game-code-block" draggable="true">
-                        &lt;p style="text-decoration: line-through;"&gt;Hello, World!&lt;/p&gt;
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="submit-container">
-                  <button class="submit-btn" onclick="checkAnswers()">Submit</button>
                 </div>
               </div>
             </div>
@@ -383,19 +404,17 @@
                 }
               });
 
-              // Hover font selector
+              // hover button
               const fontButtons = document.querySelectorAll(".font-btn");
               const mainContent = document.querySelector(".main");
 
               fontButtons.forEach(button => {
                 const font = button.getAttribute("data-font");
-                button.addEventListener("mouseenter", () => {
+                button.addEventListener("click", () => {
                   mainContent.style.fontFamily = font;
                 });
-                button.addEventListener("mouseleave", () => {
-                  mainContent.style.fontFamily = "";
-                });
               });
+
 
               // Drag and drop minigame
               const correctOrder = [

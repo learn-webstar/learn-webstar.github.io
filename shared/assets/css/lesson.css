@@ -6,13 +6,13 @@ body {
     font-size: 16px; /* 20px + 6px */
 }
 
-.descriptiongame{
+/* .descriptiongame{
    color: black;
     font-family: var(--Regular);
     margin: 0;
     padding: 0;
     font-size: 24px;
-}
+} */
 
 .main {
     font-size: 24px; /* +6px */
@@ -77,10 +77,16 @@ body {
     font-weight: bold;
 }
 
+.btn-delete{
+    background-color: var(--primaryColor);
+    font-family: var(--Regular);
+    color: var(--black);
+    border: 1px solid var(--black);
+}
 .font-buttons button {
     background-color: #FDDF94;
     color: #2C2C2C;
-    font-size: 39px; /* 35px + 6px */
+    font-size: 30px; /* 35px + 6px */
     padding: 10px 16px;
     border-radius: 6px;
     border: 1px solid var(--black);
@@ -147,7 +153,6 @@ body {
 .title {
     font-size: 28px; /* 24px + 6px */
     font-weight: bold;
-    margin-bottom: 10px;
 }
 
 .description {
@@ -187,10 +192,9 @@ body {
     border: 1px solid #444;
     padding: 10px;
     border-radius: 8px;
-    font-family: var(--Regular);
     cursor: move;
     text-align: center;
-    font-size: 19px; /* 15px + 6px */
+    font-size: 19px;
 }
 
 .submit-container {
@@ -212,9 +216,4 @@ body {
 .font-btn {
   width: 260px;
   text-align: center;
-}
-
-.form-control{
-    background-color: var(--white);
-    color: var(--black);
 }
