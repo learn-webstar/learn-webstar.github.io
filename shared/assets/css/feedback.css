@@ -33,7 +33,7 @@
     background-color: var(--primaryColor);
     color: var(--black);
     height: 50%;
-    width: 50%;
+    width: 70%;
     box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.075);
 }
 
