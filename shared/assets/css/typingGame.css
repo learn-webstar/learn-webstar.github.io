@@ -1,6 +1,6 @@
 .cardGame {
-    background-color: var(--white);
-    border: 2px solid var(--blue);
+    background-color: var(--white1);
+    border: 2px solid var(--black);
     border-radius: 1.5rem;
 }
 
@@ -10,7 +10,7 @@
 }
 
 .incorrect {
-    background-color: var(--lightBlue);
+    background-color: var(--primaryColor);
     border-radius: 4px;
 }
 
@@ -23,11 +23,11 @@
 #textDisplay span.current {
     text-decoration: underline;
     font-weight: bold;
-    color: var(--blue);
+    color: var(--highlight);
 }
 
 .header {
-    color: var(--blue);
+    color: var(--black);
     font-family: var(--Bold);
     font-size: 2.5em;
 }
@@ -40,15 +40,15 @@
 }
 
 .progressBar {
-    background-color: var(--blue);
+    background-color: var(--highlight);
 }
 
 #textDisplay {
     font-family: var(--SemiBold);
     font-size: 1.5rem;
     min-height: 100px;
-    background-color: var(--white);
-    border: 2px solid var(--blue);
+    background-color: var(--white1);
+    border: 2px solid var(--black);
 }
 
 .statusBar {
@@ -60,7 +60,7 @@
 #countdownOverlay {
     position: absolute;
     inset: 0;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: transparent;
     z-index: 999;
     display: flex;
     justify-content: center;
@@ -68,11 +68,12 @@
 }
 
 #countdownNumber {
+    font-family: var(--Bold);
     font-size: 5rem;
-    color: var(--blue);
+    color: var(--black);
     background-color: var(--white);
     padding: 1rem 2rem;
-    border: 5px solid var(--blue);
+    border: 5px solid var(--highlight);
     border-radius: 50%;
     width: 150px;
     height: 150px;
@@ -82,7 +83,7 @@
 }
 
 .result {
-    color: var(--blue);
+    color: var(--black);
     font-family: var(--Bold);
 }
 
@@ -94,12 +95,26 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 #countdownOverlay.hidden {
     display: none !important;
 }
 
+.btn{
+    border: 1px solid var(--black);
+    background-color: var(--primaryColor);
+    border-radius: 20px;
+    font-family: var(--Bold);
+    color: var(--black);
+}
+
+.btn:hover {
+    background-color: var(--highlight);
+    border: 1px solid var(--black);
+    color: var(--white);
+}
 @media (max-width: 767.98px) {
     .statusBar {
         font-size: .90em;

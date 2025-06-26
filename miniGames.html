@@ -15,9 +15,10 @@
 </head>
 
 <body>
-    <div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center p-0 p-md-3">
-        <div class="row w-100">
+    <div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center p-0 p-md-3"
+        style="background-color: var(--black);">
 
+        <div class="row w-100">
 
             <!-- Sidebar (only shows on mobile) -->
             <div class="offcanvas offcanvas-start d-md-none" tabindex="-1" id="sidebarOffcanvas"
@@ -183,10 +184,10 @@
                 </div>
             </div>
 
-
             <!-- Main Container Column-->
-            <div class="col main-container m-0 p-0 mx-0 mx-md-2 p-0 p-md-4">
-                <div class="card border-0 px-3 pt-3 m-0 h-100 w-100 rounded-0 shadow-none">
+            <div class="col main-container m-0 p-0 mx-0 mx-md-2 p-0 p-md-4 overflow-y-auto">
+                <div class="card border-0 px-3 pt-3 m-0 h-100 w-100 rounded-0 shadow-none"
+                    style="background-color: transparent;">
 
                     <!-- Navbar for mobile -->
                     <nav class="navbar navbar-light px-3 d-md-none">
@@ -215,24 +216,35 @@
                             <div class="col-12 justify-content-center align-items-center">
                                 <div class="card border-0 w-100 rounded-4 border">
                                     <div class="cardBody">
-                                        <div class="cardTitle mx-1 d-none d-md-block">
-                                            Mini Game 1
+                                        <div class="row align-items-center g-0 pt-4">
+                                            <!-- Image -->
+                                            <div class="col-auto d-none d-md-block">
+                                                <img src="shared/assets/img/game.svg" alt="Mini Game Image"
+                                                    class="gameIcon">
+                                            </div>
+
+                                            <!-- Title -->
+                                            <div class="col-auto d-none d-md-block">
+                                                <div class="cardTitle px-2">
+                                                    Mini Game 1
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="d-flex justify-content-center">
+                                        <div class="d-flex justify-content-center pt-4">
                                             <!-- Game Card -->
                                             <div class="card p-4 mx-1 w-100 rounded-4 gameContainer">
                                                 <a href="shared/miniGames/typingInstruction.html"
                                                     class="stretched-link d-md-none position-static"></a>
                                                 <div class="row w-100">
                                                     <div class="col-12 d-md-none d-flex justify-content-center">
-                                                        <img src="shared/assets/img/miniGamesImg/typing.svg"
+                                                        <img src="shared/assets/img/typing.svg"
                                                             class="img-fluid smallImg" alt="Game Image">
                                                     </div>
 
                                                     <!-- Desktop (image only) -->
                                                     <div
                                                         class="col-12 col-md-3 d-none d-md-flex justify-content-center">
-                                                        <img src="shared/assets/img/miniGamesImg/typing.svg"
+                                                        <img src="shared/assets/img/typing.svg"
                                                             class="img-fluid smallImg" alt="Game Image">
                                                     </div>
                                                     <div
@@ -244,7 +256,7 @@
                                                     <div
                                                         class="col-md-4 d-none d-md-flex align-items-center justify-content-end">
                                                         <a href="shared/miniGames/typingInstruction.html">
-                                                            <img src="shared/assets/img/miniGamesImg/arrow.svg"
+                                                            <img src="shared/assets/img/rightArrow.svg"
                                                                 class="img-fluid smallImgArrow" alt="Arrow">
                                                         </a>
                                                     </div>
