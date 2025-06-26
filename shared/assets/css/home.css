@@ -109,6 +109,7 @@
     background-color: var(--primaryColor);
     border-radius: 20px;
     align-self: center;
+    border: 1px solid var(--black);
 }
 
 .htmlText {
