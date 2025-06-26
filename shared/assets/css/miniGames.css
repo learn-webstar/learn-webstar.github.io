@@ -1,13 +1,18 @@
 .cardTitle {
     font-family: var(--Bold);
-    font-size: 2em;
-    color: var(--blue)
+    font-size: 2.5em;
+    color: var(--black)
 }
 
 .gameTitle {
     font-family: var(--Regular);
-    color: var(--white);
+    color: (--black);
     font-size: 1.2em;
+}
+
+.gameIcon {
+    width: 60px;
+    vertical-align: middle;
 }
 
 @media (max-width: 768px) {
@@ -49,7 +54,7 @@
 }
 
 .gameContainer {
-    background-color: var(--blue);
+    background-color: var(--primaryColor);
     height: 180px;
     justify-content: center;
     align-items: center;
@@ -61,6 +66,6 @@
 }
 
 .smallImgArrow {
-    width: 25px;
+    width: 40px;
     height: auto;
 }
