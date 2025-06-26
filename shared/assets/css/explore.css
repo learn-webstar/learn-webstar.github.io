@@ -64,25 +64,6 @@
         overflow-y: auto;
     }
 
-    /* Custom scrollbar styling */
-    .user-list::-webkit-scrollbar {
-        width: 8px;
-    }
-
-    .user-list::-webkit-scrollbar-track {
-        background: #f1f1f1;
-        border-radius: 10px;
-    }
-
-    .user-list::-webkit-scrollbar-thumb {
-        background: #FF6B6B;
-        border-radius: 10px;
-    }
-
-    .user-list::-webkit-scrollbar-thumb:hover {
-        background: #ff5252;
-    }
-
     .user-list .user-row {
         display: flex;
         align-items: center;
