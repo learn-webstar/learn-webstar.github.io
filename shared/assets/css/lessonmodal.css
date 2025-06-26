@@ -7,13 +7,13 @@
 
     #modalResultTitle {
       font-size: 2.5rem;
-      color: var(--blue);
+      color: var(--black);
       font-weight: 700;
     }
 
     #modalResultMessage {
       font-size: 1rem;
-      color: black;
+      color: var(--black);
     }
 
     .highlight {
@@ -43,7 +43,7 @@
 
 .custom-modal {
   border: none;
-  background-color: #fff;
+  background-color: var(--white);
   max-width: 500px;
   width: 100%;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
@@ -56,14 +56,14 @@
   background: none;
   border: none;
   font-size: 1.5rem;
-  color: var(--blue); /* Replace with your theme variable */
+  color: var(--black); /* Replace with your theme variable */
   line-height: 1;
   cursor: pointer;
 }
 
 .modal-divider {
   border: none;
-  border-top: 2px solid var(--blue);
+  border-top: 2px solid var(--black);
   width: 100vw; /* full viewport width */
   margin: 0; /* remove spacing */
   position: relative;

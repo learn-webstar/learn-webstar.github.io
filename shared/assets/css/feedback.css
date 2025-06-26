@@ -1,5 +1,5 @@
 .feedback-heading {
-  color: #2563EB;
+  color: var(--black);
   font-weight: 700;
   font-size: 1.5em;
   font-family: var(--Bold);
@@ -9,7 +9,7 @@
     max-width: 80%;
     font-family: var(--SemiBold);
     font-size: 1em;
-    color: #495057;
+    color: var(--black);
     text-align: left;
 }
 
@@ -21,7 +21,7 @@
 .feedback-label {
     font-family: var(--Regular);
     font-weight: 600;
-    color: #111E2C;
+    color: var(--black);
     text-align: left;
 }
 
@@ -29,8 +29,9 @@
     font-family: var(--Regular);
     font-size: 20px;
     border-radius: 0.5rem;
-    background-color: var(--blue);
-    color: var(--white);
+    border: 1px solid var(--black);
+    background-color: var(--primaryColor);
+    color: var(--black);
     height: 50%;
     width: 50%;
     box-shadow: 0 .125rem .25rem rgba(0, 0, 0, 0.075);
@@ -43,10 +44,14 @@
     padding: 0.5rem 1.5rem;
     width: auto;
     max-width: 200px;
+    color: var(--black);
+    background-color: var(--primaryColor);
+    border: 1px solid var(--black);;
 }
 
-.maincontainer {
-    color: var(--blue);
+.modal-content {
+    background-color: var(--white);
+    color: var(--black);
     font-weight: 700;
     font-size: 30px;
     font-family: var(--Bold);
