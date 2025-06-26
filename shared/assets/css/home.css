@@ -139,6 +139,7 @@
 } */
 
 
+
 @media (max-width: 576px) {
     .course-text {
         white-space: nowrap !important;
@@ -165,10 +166,10 @@
     .achievementCard .progress+.blueColorText {
         margin-left: 8px;
         align-self: center;
-        
+
     }
 
-      .achievementCard .w-100 {
+    .achievementCard .w-100 {
         padding-left: 12px;
     }
 

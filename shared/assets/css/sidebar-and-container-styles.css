@@ -62,3 +62,13 @@ html, body {
     border: 1px solid var(--black) !important;
 }
 
+.btn-webstars {
+    background-color: var(--white1);
+    color: var(--black);
+    border: 1px solid var(--black);
+    font-family: var(--SemiBold);
+}
+
+.webstar-points{
+    font-family: var(--Black)!important;
+}
