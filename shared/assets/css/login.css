@@ -44,8 +44,9 @@
         }
 
         .btn-login:hover {
-            background-color: var(--highlight) !important;
-            color: var(--white) !important;
+            background-color: var(--primaryColor) !important;
+            color: var(--black) !important;
+            border: 1px solid var(--black) !important;
         }
 
         .login-form {
