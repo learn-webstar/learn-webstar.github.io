@@ -1,34 +1,34 @@
 @font-face {
     font-family: 'DM Sans Medium';
-    src: url('../font/DMSans_18pt-Medium.ttf') format('truetype'); 
+    src: url('../font/DMSans_18pt-Medium.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'DM Sans Black';
-    src: url('../font/DMSans_18pt-Black.ttf') format('truetype'); 
+    src: url('../font/Poppins-SemiBold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'DM Sans Regular';
-    src: url('../font/DMSans_18pt-Regular.ttf') format('truetype'); 
+    src: url('../font/Poppins-Medium.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'DM Sans SemiBold';
-    src: url('../font/DMSans_18pt-SemiBold.ttf') format('truetype'); 
+    src: url('../font/DMSans_18pt-SemiBold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'DM Sans Bold';
-    src: url('../font/DMSans_24pt-Bold.ttf') format('truetype'); 
+    src: url('../font/Poppins-SemiBold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -36,9 +36,12 @@
 :root {
     /* Color Branding */
     --lightBlue: #D4E0F9;
-    --white: #ffffff;
     --blue: #2A63E2;
     --black: #2C2C2C;
+    --primaryColor: #FDE29C;
+    --highlight: #FF6B6B;
+    --white: #FFF9F0;
+    --white1: #FFFFFF;
 
     /* Typography */
     --Black: 'DM Sans Black';
