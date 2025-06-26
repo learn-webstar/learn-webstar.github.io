@@ -375,12 +375,12 @@
                 if (page === activePage) {
                     item.classList.add("selected-box");
                     link.classList.add("selected");
-                    const src = img.getAttribute("src").replace(".png", "-w.png");
+                    const src = img.getAttribute("src").replace(".png", ".png");
                     img.setAttribute("src", src);
                 } else {
                     item.classList.remove("selected-box");
                     link.classList.remove("selected");
-                    const src = img.getAttribute("src").replace("-w.png", ".png");
+                    const src = img.getAttribute("src").replace(".png", ".png");
                     img.setAttribute("src", src);
                 }
             });
