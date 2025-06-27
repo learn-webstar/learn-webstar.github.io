@@ -7,7 +7,7 @@
 .btn {
     font-family: var(--Regular);
     color: var(--black);
-    background-color: var(--highlight);
+    background-color: var(--primaryColor);
     border: 1px solid var(--black);
 }
 
