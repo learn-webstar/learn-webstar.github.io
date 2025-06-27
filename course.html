@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Webstar | Courses</title>
+    <title>WebStar | Courses</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="stylesheet" href="shared/assets/css/course.css">
@@ -15,7 +15,8 @@
 </head>
 
 <body>
-    <div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center p-0 p-md-3" style="background-color: var(--black);">
+    <div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center p-0 p-md-3"
+        style="background-color: var(--black);">
 
         <div class="row w-100">
 
@@ -28,13 +29,14 @@
                 </div>
                 <div class="offcanvas-body d-flex flex-column p-0">
                     <div class="d-flex flex-column flex-shrink-0 p-3" style="width: 100%;">
-                        <a href="/" class="d-flex align-items-center  text-decoration-none">
+                        <a class="d-flex align-items-center  text-decoration-none">
                             <img src="shared/assets/img/webstar-logo-black.png" class="img-fluid w-100 py-3 px-2" />
                         </a>
 
                         <hr>
                         <ul class="nav nav-pills flex-column mb-auto">
-                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2 rounded-3" data-page="home">
+                            <li class="nav-item d-flex align-items-center gap-2 my-1 p-2 rounded-3"
+                                data-page="home">
                                 <img src="shared/assets/img/dashboard.png" style="width: 30px; height: 30px;">
                                 <a class="nav-link text-dark p-0" href="index.html">Home</a>
                             </li>
@@ -56,6 +58,26 @@
                                 <a class="nav-link text-dark p-0" href="miniGames.html">Mini-games</a>
                             </li>
                         </ul>
+                        <hr>
+                        <!-- WebStars for Mobile-->
+                        <div class="btn btn-webstars mx-3 my-3 py-2">
+                            <div class="row">
+                                <div class="col-auto d-flex justify-content-center align-items-center ms-2">
+                                    <img src="shared/assets/img/stars.png" alt="" width="32" height="32">
+                                </div>
+                                <div class="col">
+                                    <div class="text-dark text-start webstar-points"
+                                        style=" font-size:20px; margin-left: -10px;">
+                                        3160
+                                    </div>
+                                    <div class="p text-muted  text-start"
+                                        style="font-size:15px; margin-top:-5px; margin-left: -10px;">
+                                        webstars
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
 
                         <!-- Profile -->
                         <hr>
@@ -69,9 +91,11 @@
                             <ul class="dropdown-menu dropdown-menu-end text-small shadow">
                                 <li class="ms-3 my-1" style="font-family: var(--Bold);"><i
                                         class="fa-solid fa-gear me-2"></i>Settings</li>
-                                <li><a class="dropdown-item" style="font-family: var(--Regular);" href="termsAndConditions.html">Terms &
+                                <li><a class="dropdown-item" style="font-family: var(--Regular);"
+                                        href="termsAndConditions.html">Terms &
                                         Conditions</a></li>
-                                <li><a class="dropdown-item" style="font-family: var(--Regular);" href="changePassword.html">Change
+                                <li><a class="dropdown-item" style="font-family: var(--Regular);"
+                                        href="changepassword.html">Change
                                         Password</a></li>
                                 <li><a class="dropdown-item" style="font-family: var(--Regular);"
                                         href="faqs.html">FAQs</a></li>
@@ -84,8 +108,9 @@
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" style="font-family: var(--Bold);" href="login.html"><i
-                                            class="fa-solid fa-right-from-bracket me-2"></i>Sign out</a></li>
+                                <li><a class="dropdown-item" style="font-family: var(--Bold); color:var(--highlight)"
+                                        href="login.html"><i class="fa-solid fa-right-from-bracket me-2"></i>Sign
+                                        out</a></li>
                             </ul>
                         </div>
                     </div>
@@ -144,6 +169,25 @@
 
                             </ul>
 
+                            <!-- WebStars for Desktop -->
+                            <div class="btn btn-webstars mx-3 mt-4 py-2">
+                                <div class="row">
+                                    <div class="col-auto d-flex justify-content-center align-items-center ms-2">
+                                        <img src="shared/assets/img/stars.png" alt="" width="32" height="32">
+                                    </div>
+                                    <div class="col">
+                                        <div class="text-dark text-start webstar-points"
+                                            style=" font-size:20px; margin-left: -10px;">
+                                            3160
+                                        </div>
+                                        <div class="p text-muted  text-start"
+                                            style="font-size:15px; margin-top:-5px; margin-left: -10px;">
+                                            webstars
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
 
 
                             <div class="dropdown mt-auto p-4" style="letter-spacing: -1px;">
@@ -157,9 +201,11 @@
                                 <ul class="dropdown-menu dropdown-menu-end text-small shadow">
                                     <li class="ms-3 my-1" style="font-family: var(--Bold);"><i
                                             class="fa-solid fa-gear me-2"></i>Settings</li>
-                                    <li><a class="dropdown-item" style="font-family: var(--Regular);" href="termsAndConditions.html">Terms &
+                                    <li><a class="dropdown-item" style="font-family: var(--Regular);"
+                                            href="termsAndConditions.html">Terms &
                                             Conditions</a></li>
-                                    <li><a class="dropdown-item" style="font-family: var(--Regular);" href="changePassword.html">Change
+                                    <li><a class="dropdown-item" style="font-family: var(--Regular);"
+                                            href="changepassword.html">Change
                                             Password</a></li>
                                     <li><a class="dropdown-item" style="font-family: var(--Regular);"
                                             href="faqs.html">FAQs</a>
@@ -173,8 +219,10 @@
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" style="font-family: var(--Bold);" href="login.html"><i
-                                                class="fa-solid fa-right-from-bracket me-2"></i>Sign out</a></li>
+                                    <li><a class="dropdown-item"
+                                            style="font-family: var(--Bold); color:var(--highlight)"
+                                            href="login.html"><i class="fa-solid fa-right-from-bracket me-2"></i>Sign
+                                            out</a></li>
                                 </ul>
                             </div>
 
@@ -185,7 +233,8 @@
 
             <!-- Main Container Column-->
             <div class="col main-container m-0 p-0 mx-0 mx-md-2 p-0 p-md-4 overflow-y-auto">
-                <div class="card border-0 px-3 pt-3 m-0 h-100 w-100 rounded-0 shadow-none" style="background-color: var(--white);">
+                <div class="card border-0 px-3 pt-3 m-0 h-100 w-100 rounded-0 shadow-none"
+                    style="background-color: var(--white);">
                     <!-- Navbar for mobile -->
                     <nav class="navbar navbar-light px-3 d-md-none">
                         <div class="container-fluid position-relative">
@@ -220,17 +269,20 @@
                                                         <img src="shared/assets/img/courses/css.png" class="" alt="Left"
                                                             style="width: 100%; height: 100%; object-fit: contain;">
                                                     </div>
-                                                     <div class="d-flex flex-column justify-content-center" style="font-size: 20px;">
-                                                    <div class="htmlText">CSS Course</div>
-                                                    <div class="fw-bold addImageText">Fonts and Formatting</div>
-                                                </div>
-                                                    <a href="lesson.html"><img src="shared/assets/img/courses/keyboard_arrow_right.png"
-                                                        alt="arrow"
-                                                        class="d-none d-sm-block d-lg-none d-xl-block img-fluid ms-auto arrow"
-                                                        width="120px"></a>
+                                                    <div class="d-flex flex-column justify-content-center"
+                                                        style="font-size: 20px;">
+                                                        <div class="htmlText">CSS Course</div>
+                                                        <div class="fw-bold addImageText">Fonts and Formatting</div>
+                                                    </div>
+                                                    <a href="lesson.html"><img
+                                                            src="shared/assets/img/courses/keyboard_arrow_right.png"
+                                                            alt="arrow"
+                                                            class="d-none d-sm-block d-lg-none d-xl-block img-fluid ms-auto arrow"
+                                                            width="120px"></a>
                                                 </div>
                                                 <div class="mt-sm-3">
-                                                    <div class="w-100 mx-auto border progress-bar" style="height: 10px;">
+                                                    <div class="w-100 mx-auto border progress-bar"
+                                                        style="height: 10px;">
                                                         <div class="progress"></div>
                                                     </div>
                                                     <div class="d-flex justify-content-between">
@@ -241,7 +293,9 @@
                                                 <div
                                                     class="d-flex d-lg-flex justify-content-center d-sm-none d-lg-block d-xl-none mt-2">
                                                     <div class="btn text-center w-75 border continue-btn fw-bold">
-                                                        <a href="lesson.html" class="text-decoration-none text-white">Continue</a></div>
+                                                        <a href="lesson.html"
+                                                            class="text-decoration-none text-white">Continue</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -343,8 +397,8 @@
 
                                                         <!-- More Courses -->
                                                         <div class="col-12">
-                                                            <div
-                                                                class="text-center p-2 p-xxl-3 fw-bold course-text opacity-75" style="color: var(--black); font-size: 20px;">
+                                                            <div class="text-center p-2 p-xxl-3 fw-bold course-text opacity-75"
+                                                                style="color: var(--black); font-size: 20px;">
                                                                 More Courses Coming Soon!</div>
                                                         </div>
                                                     </div>
@@ -362,31 +416,39 @@
                                     <div id="lessonContainer"
                                         class="lessons-container px-4 p-3 py-md-5 lesson-available overflow-y-auto flex-grow-1 text-center">
                                         <div class="h5 mb-3 fw-bold">CSS Lessons</div>
-                                        <div class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
+                                        <div
+                                            class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
                                             <div class="me-auto ms-1 lesson-text">01</div>
                                             <div class="mx-auto lesson-text">Introduction to CSS</div>
                                             <img src="shared/assets/img/courses/check_circle.png" alt="arrow"
                                                 class="img-fluid ms-auto me-1 lesson-image" width="28px">
                                         </div>
-                                        <div class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
+                                        <div
+                                            class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
                                             <div class="me-auto ms-1 lesson-text">02</div>
                                             <div class="mx-auto lesson-text">Ways to Apply CSS</div>
                                             <img src="shared/assets/img/courses/check_circle.png" alt="arrow"
                                                 class="img-fluid ms-auto me-1 lesson-image" width="28px">
                                         </div>
-                                        <div class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
+                                        <div
+                                            class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
                                             <div class="me-auto ms-1 lesson-text">03</div>
                                             <div class="mx-auto lesson-text">CSS Syntax & Selectors</div>
                                             <img src="shared/assets/img/courses/check_circle.png" alt="arrow"
                                                 class="img-fluid ms-auto me-1 lesson-image" width="28px">
                                         </div>
-                                        <a href="lesson.html" class="text-decoration-none"><div class="box lessons-container fw-bold mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
-                                            <div class="me-auto ms-1 lesson-text">04</div>
-                                            <div class="mx-auto lesson-text">Fonts and Formatting</div>
-                                            <img src="shared/assets/img/courses/keyboard_arrow_right.png" alt="arrow"
-                                                class="img-fluid ms-auto me-1 lesson-image" width="28px">
-                                        </div></a>
-                                        <div class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center opacity-25">
+                                        <a href="lesson.html" class="text-decoration-none">
+                                            <div
+                                                class="box lessons-container fw-bold mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
+                                                <div class="me-auto ms-1 lesson-text">04</div>
+                                                <div class="mx-auto lesson-text">Fonts and Formatting</div>
+                                                <img src="shared/assets/img/courses/keyboard_arrow_right.png"
+                                                    alt="arrow" class="img-fluid ms-auto me-1 lesson-image"
+                                                    width="28px">
+                                            </div>
+                                        </a>
+                                        <div
+                                            class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center opacity-25">
                                             <div class="me-auto ms-1 lesson-text">05</div>
                                             <div class="mx-auto lesson-text">Colors and Backgrounds</div>
                                             <img src="shared/assets/img/courses/locked.png" alt="arrow"
@@ -478,12 +540,15 @@
                                             <img src="shared/assets/img/courses/check_circle.png" alt="arrow"
                                                 class="img-fluid ms-auto me-1 lesson-image" width="28px">
                                         </div>
-                                        <div class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
-                                            <div class="me-auto ms-1 lesson-text">02</div>
-                                            <div class="mx-auto lesson-text">Text Formatting and Headings</div>
-                                            <img src="shared/assets/img/courses/check_circle.png" alt="arrow"
-                                                class="img-fluid ms-auto me-1 lesson-image" width="28px">
-                                        </div>
+                                        <a href="lesson-html.html" class="text-decoration-none text-dark">
+    <div class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
+        <div class="me-auto ms-1 lesson-text">02</div>
+        <div class="mx-auto lesson-text">Text Formatting and Headings</div>
+        <img src="shared/assets/img/courses/check_circle.png" alt="arrow"
+            class="img-fluid ms-auto me-1 lesson-image" width="28px">
+    </div>
+</a>
+
                                         <div class="lessons-container mb-2 p-1 p-sm-3 d-flex align-items-center highlight">
                                             <div class="me-auto ms-1 lesson-text">03</div>
                                             <div class="mx-auto lesson-text">Adding Images to Your Website</div>
